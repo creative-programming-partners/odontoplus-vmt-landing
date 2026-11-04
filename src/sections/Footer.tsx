@@ -12,9 +12,9 @@ export function Footer() {
         <div className="grid gap-10 border-b border-white/15 pb-14 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <p className="text-[clamp(2.2rem,5vw,4rem)] leading-[1.02] font-[800] tracking-[-0.035em] [font-variation-settings:'wdth'_112]">
-              Lo que hoy está en rojo,
+              Lo que hoy está <span className="text-mark-red">en rojo,</span>
               <br />
-              <span className="text-[#7ea6ef]">mañana puede estar en azul.</span>
+              mañana puede estar <span className="text-[#7ea6ef]">en azul.</span>
             </p>
             <ButtonLink href={quickMessage()} variant="whatsapp" size="lg" className="mt-8">
               <WhatsappIcon className="size-5" />

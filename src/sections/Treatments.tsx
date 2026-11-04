@@ -55,8 +55,9 @@ export function Treatments() {
                     onClick={() => setOpen(isOpen ? null : t.id)}
                     className="group grid w-full grid-cols-[1fr_2.75rem] items-start gap-x-6 gap-y-1 py-5 text-left md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_10rem_2.75rem] md:items-center"
                   >
-                    <span role="cell" className="wdth-wide text-xl font-bold tracking-tight md:text-[1.4rem]">
-                      {t.name}
+                    <span role="cell" className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                      <span className="wdth-wide text-xl font-bold tracking-tight md:text-[1.4rem]">{t.name}</span>
+                      {t.source === 'ejemplo' ? <SourceTag source={t.source} /> : null}
                     </span>
                     <span
                       role="cell"
@@ -93,7 +94,7 @@ export function Treatments() {
                     <div className="overflow-hidden" inert={!isOpen}>
                       <div className="grid gap-4 pb-7 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_10rem_2.75rem] md:gap-6">
                         <div className="flex items-start md:pt-1">
-                          <SourceTag source={t.source} />
+                          {t.source !== 'ejemplo' ? <SourceTag source={t.source} /> : null}
                         </div>
                         <div className="md:col-span-2">
                           <p className="max-w-[60ch] text-ink-2">{t.detail}</p>

@@ -71,12 +71,12 @@ export function ChartPanel() {
   return (
     <div className="relative rounded-[14px] border border-ink/20 bg-white/70">
       {/* chart header: printed-form fields */}
-      <div className="grid grid-cols-[1fr_auto] items-end gap-x-6 border-b border-ink/20 px-4 pt-3 pb-2.5 sm:grid-cols-[auto_1fr_auto] sm:px-5">
-        <p className="wdth-wide text-[0.95rem] font-bold tracking-tight">Ficha odontológica</p>
-        <p className="hidden truncate font-mono text-[0.65rem] text-ink-3 sm:block">
+      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-1.5 border-b border-ink/20 px-3 pt-3 pb-2.5 sm:px-5">
+        <p className="wdth-wide text-[0.95rem] font-bold tracking-tight whitespace-nowrap">Ficha odontológica</p>
+        <p className="mr-auto hidden truncate font-mono text-[0.65rem] text-ink-3 sm:block">
           Paciente: <span className="text-ink">tú</span>
         </p>
-        <div className="flex items-center gap-3 font-mono text-[0.6rem] text-ink-3">
+        <div className="flex items-center gap-3 font-mono text-[0.6rem] whitespace-nowrap text-ink-3">
           <span className="inline-flex items-center gap-1.5">
             <span className="size-2.5 rounded-[2px] bg-mark-red" aria-hidden /> Por tratar
           </span>
@@ -87,7 +87,7 @@ export function ChartPanel() {
       </div>
 
       {/* what do you feel */}
-      <div className="border-b border-ink/10 px-4 py-3 sm:px-5">
+      <div className="border-b border-ink/10 px-3 py-2.5 sm:px-5 sm:py-3">
         <p id="symptom-label" className="mb-2 text-sm font-semibold text-ink-2">
           ¿Qué sientes?
         </p>
@@ -102,7 +102,7 @@ export function ChartPanel() {
                 aria-checked={active}
                 onClick={() => chooseSymptom(s.id)}
                 className={cn(
-                  'press min-h-9 rounded-full border px-3 text-[0.82rem] font-medium',
+                  'press min-h-10 rounded-full border px-3 text-[0.8rem] font-medium sm:text-[0.82rem]',
                   active
                     ? 'border-ink bg-ink text-paper'
                     : 'border-ink/20 text-ink-2 [@media(hover:hover)]:hover:border-ink/50',
@@ -132,7 +132,7 @@ export function ChartPanel() {
             animate={{ opacity: 1, filter: 'blur(0px)', transform: 'translateY(0px)' }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, filter: 'blur(4px)' }}
             transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
-            className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-end"
+            className="grid gap-4"
           >
             <div className="min-w-0">
               <p className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
@@ -165,11 +165,11 @@ export function ChartPanel() {
               <p className="mt-1 max-w-[52ch] text-[0.92rem] text-ink-2">
                 {symptom || !tooth ? treatment?.solves : toothGuide[toothKind(tooth)].problems}
                 {treatment ? (
-                  <span className="text-ink-3"> · {treatment.visits}</span>
+                  <span className="whitespace-nowrap text-ink-3"> · {treatment.visits}</span>
                 ) : null}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 sm:justify-end">
+            <div className="flex flex-wrap gap-2">
               <Button
                 variant="outline"
                 onClick={() => setTreated((v) => !v)}
@@ -188,7 +188,11 @@ export function ChartPanel() {
               </Button>
               <ButtonLink variant="whatsapp" href={whatsappUrl(message)} className="h-11">
                 <WhatsappIcon className="size-[18px]" />
-                Consultar
+                {markedTeeth.length === 0
+                  ? 'Consultar por mis encías'
+                  : markedTeeth.length === 1
+                    ? `Consultar por la pieza ${markedTeeth[0]}`
+                    : `Consultar por las piezas ${markedTeeth.join(', ')}`}
               </ButtonLink>
             </div>
           </motion.div>

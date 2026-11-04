@@ -32,10 +32,12 @@ export function Location() {
                   <tbody>
                     {clinic.hours.rows.map((r) => (
                       <tr key={r.days} className="border-b border-ink/10 last:border-0">
-                        <th scope="row" className="py-2 pr-4 font-medium">
+                        <th scope="row" className="py-2 pr-3 font-medium whitespace-nowrap">
                           {r.days}
                         </th>
-                        <td className="tabular py-2 text-right font-mono text-sm text-ink-2">{r.time}</td>
+                        <td className="tabular py-2 text-right font-mono text-[0.78rem] whitespace-nowrap text-ink-2 sm:text-sm">
+                          {r.time}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -44,10 +46,10 @@ export function Location() {
             </div>
             <div className="grid gap-3">
               <a href={`tel:+${clinic.whatsapp}`} className="inline-flex items-center gap-2 font-semibold underline decoration-ink/25 hover:decoration-ink">
-                <Phone className="size-4 text-mark-blue" aria-hidden /> {clinic.phoneDisplay}
+                <Phone className="size-4 text-ink-3" aria-hidden /> {clinic.phoneDisplay}
               </a>
               <a href={`mailto:${clinic.email}`} className="inline-flex min-w-0 items-center gap-2 font-semibold underline decoration-ink/25 hover:decoration-ink">
-                <Mail className="size-4 shrink-0 text-mark-blue" aria-hidden />
+                <Mail className="size-4 shrink-0 text-ink-3" aria-hidden />
                 <span className="truncate">{clinic.email}</span>
               </a>
             </div>

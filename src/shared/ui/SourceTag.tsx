@@ -17,7 +17,7 @@ export function SourceTag({ source, tone = 'paper', className }: Props) {
       className={cn(
         'inline-flex items-center gap-1.5 rounded-[3px] border px-1.5 py-0.5 font-mono text-[0.625rem] leading-none tracking-wide uppercase',
         tone === 'paper' &&
-          (demo ? 'border-dashed border-ink-3/50 text-ink-3' : 'border-mark-blue/30 text-mark-blue'),
+          (demo ? 'border-dashed border-ink-3/50 text-ink-3' : 'border-ink/30 text-ink-2'),
         tone === 'night' &&
           (demo ? 'border-dashed border-white/30 text-white/60' : 'border-white/30 text-white/80'),
         className,

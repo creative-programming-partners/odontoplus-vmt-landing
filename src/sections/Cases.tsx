@@ -12,7 +12,11 @@ import { SourceTag } from '../shared/ui/SourceTag'
 import { InstagramIcon } from '../shared/ui/icons'
 
 const pieces = (teeth: number[]) =>
-  teeth.length === 1 ? `Pieza ${teeth[0]}` : `Piezas ${teeth.join(', ')}`
+  teeth.length === 1
+    ? `Pieza ${teeth[0]}`
+    : teeth.length > 3
+      ? `Piezas ${teeth[0]} a ${teeth[teeth.length - 1]}`
+      : `Piezas ${teeth.join(', ')}`
 
 /**
  * Cases the clinic has published. Selecting one replays it on the chart:
@@ -83,7 +87,7 @@ export function Cases() {
                         aria-hidden
                         className={cn(
                           'size-3 rounded-[3px] border transition-colors duration-200',
-                          selected ? 'border-mark-blue bg-mark-blue' : 'border-ink/30',
+                          selected ? 'border-ink bg-ink' : 'border-ink/30',
                         )}
                       />
                     </button>
@@ -135,7 +139,7 @@ export function Cases() {
                   transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                   className="grid gap-8 p-5 md:p-7"
                 >
-                  <div className="chart-grid -mx-5 px-5 py-6 md:-mx-7 md:px-7">
+                  <div className="chart-grid -mx-5 -mt-5 px-5 pt-6 pb-4 md:-mx-7 md:-mt-7 md:px-10 md:pt-8">
                     <SegmentChart
                       teeth={active.teeth}
                       mark={phase === 'antes' ? 'red' : 'blue'}
@@ -145,9 +149,9 @@ export function Cases() {
 
                   <div className="grid gap-6 md:grid-cols-[1fr_1.1fr]">
                     <div>
-                      <SourceTag source={active.source} />
-                      <h3 className="mt-3 text-[1.75rem] font-[750]">{active.title}</h3>
+                      <h3 className="text-[1.75rem] font-[750]">{active.title}</h3>
                       <p className="mt-2 text-ink-2">{active.highlight}</p>
+                      <SourceTag source={active.source} className="mt-4" />
                     </div>
                     <ol className="grid content-start gap-3">
                       {active.steps.map((s, i) => (
@@ -173,7 +177,7 @@ export function Cases() {
                     href={clinic.instagram.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-mark-blue underline decoration-mark-blue/30 hover:decoration-mark-blue"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink underline decoration-ink/30 hover:decoration-ink"
                   >
                     Ver las fotos de este caso en Instagram
                     <ArrowUpRight className="size-4" aria-hidden />

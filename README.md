@@ -33,11 +33,18 @@ src/
 │  ├─ ui/               Button, Container, Reveal, SectionHeading, SourceTag, iconos
 │  ├─ hooks/            useScrolled
 │  └─ lib/              whatsapp.ts (arma los mensajes), cn.ts
+├─ brand/               Hoja del sistema de marca (/brand.html)
 ├─ data/                Todo el contenido: clínica, tratamientos, casos, equipo, FAQ, dientes
 └─ styles/              globals.css con los tokens de diseño
 ```
 
 Todo el texto vive en `src/data/`. Para adaptar el prototipo a otra clínica basta con editar esos archivos.
+
+## Marca y Figma
+
+- `/brand.html` (código en `src/brand/`): hoja del sistema de marca con logo, paleta, tipografía, notación del odontograma y componentes, armada con los componentes reales.
+- `design/figma/`: versiones estáticas y autocontenidas (estilos y fuentes incrustados) de la landing en escritorio 1440 y móvil 390, y de la hoja de marca. Son las que se convierten en capas editables de Figma.
+- `DESIGN.md`: el sistema de diseño documentado (tokens, tipografía, componentes, movimiento).
 
 ## Contenido real vs. de ejemplo
 

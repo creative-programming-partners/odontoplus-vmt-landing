@@ -16,23 +16,21 @@ export function Testimonials() {
           </h2>
 
           {/* Real figure from the clinic's Facebook page, framed as a stamped entry rather than a vanity metric */}
-          <div className="mt-10 max-w-sm rounded-[12px] border-2 border-mark-blue p-5">
-            <div className="flex items-center justify-between gap-4">
-              <FacebookIcon className="size-6 text-mark-blue" />
+          <div className="mt-10 max-w-sm rounded-[12px] border-2 border-ink p-5">
+            <p className="wdth-wide text-[1.6rem] leading-tight font-bold text-ink">{clinic.rating.label}</p>
+            <p className="mt-1 text-ink-2">Según {clinic.rating.detail} en su página.</p>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-ink/15 pt-4">
+              <a
+                href={clinic.facebook.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold underline decoration-ink/30 hover:decoration-ink"
+              >
+                <FacebookIcon className="size-[18px]" />
+                Leer en Facebook <ArrowUpRight className="size-4" aria-hidden />
+              </a>
               <SourceTag source={clinic.rating.source} />
             </div>
-            <p className="wdth-wide mt-5 text-[1.6rem] leading-tight font-bold text-mark-blue">
-              {clinic.rating.label}
-            </p>
-            <p className="mt-1 text-ink-2">Según {clinic.rating.detail} en su página.</p>
-            <a
-              href={clinic.facebook.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-sm font-semibold underline decoration-ink/30 hover:decoration-ink"
-            >
-              Leer en Facebook <ArrowUpRight className="size-4" aria-hidden />
-            </a>
           </div>
         </Reveal>
 

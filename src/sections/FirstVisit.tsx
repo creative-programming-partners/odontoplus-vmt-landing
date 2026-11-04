@@ -25,7 +25,7 @@ export function FirstVisit() {
         <ol className="mt-14 grid gap-px overflow-hidden rounded-[14px] border border-white/15 bg-white/15 md:grid-cols-2 xl:grid-cols-4">
           {firstVisit.map((step, i) => (
             <Reveal as="li" key={step.title} delay={i * 0.06} className="flex flex-col bg-night p-6 md:p-7">
-              <span className="tabular font-mono text-sm text-mark-blue-soft/80">
+              <span className="tabular font-mono text-sm text-white/60">
                 Paso {i + 1}
                 <span className="text-white/35"> / {firstVisit.length}</span>
               </span>
