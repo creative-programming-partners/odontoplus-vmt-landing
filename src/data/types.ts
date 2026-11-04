@@ -11,15 +11,18 @@ export type Treatment = {
   solves: string
   visits: string
   detail: string
+  /** key in src/shared/lib/photos.ts, when the treatment has a photo */
+  photo?: PhotoKey
   source: Source
 }
 
+/** A case as titled in the clinic's own Instagram posts: small lead, big word, small tail. */
 export type ClinicalCase = {
   id: string
-  title: string
-  highlight: string
-  teeth: number[]
-  steps: string[]
+  lead: string
+  big: string
+  tail: string
+  summary: string
   source: Source
 }
 
@@ -42,3 +45,15 @@ export type FaqItem = {
   question: string
   answer: string
 }
+
+export type PhotoKey =
+  | 'heroConsulta'
+  | 'pacienteEspejo'
+  | 'ninoRevision'
+  | 'consultorio'
+  | 'endodoncia'
+  | 'resinas'
+  | 'limpieza'
+  | 'rehabilitacion'
+  | 'cepillado'
+  | 'coronas'

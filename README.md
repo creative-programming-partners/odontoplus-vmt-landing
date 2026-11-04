@@ -6,14 +6,16 @@ Prototipo de landing page para **OdontoPlus VMT**, clínica dental en Av. Pachac
 
 Cada push a `main` vuelve a publicar el sitio en GitHub Pages (`.github/workflows/deploy-pages.yml`).
 
-La página está pensada como la **ficha odontológica** de la clínica: el visitante elige lo que siente, lo ve marcado en el diente (rojo = por tratar, azul = tratado), lee qué tratamiento lo resuelve y reserva por WhatsApp con el mensaje ya escrito.
+## La idea: reserva a la vista
+
+Quien entra entiende en segundos qué es (una clínica dental en VMT), dónde queda y cómo reservar. En la portada está la **tarjeta de citas** de la clínica: el visitante elige qué necesita, el día y el turno; el talón muestra el resumen y el botón abre WhatsApp con ese mensaje ya escrito. Nada es obligatorio.
 
 ## Stack
 
 - React 19 + Vite + TypeScript
 - Tailwind CSS v4 (tokens en `src/styles/globals.css`)
 - Motion (animaciones) y lucide-react (iconos)
-- Tipografías autoalojadas: Archivo (ancho variable) y Martian Mono
+- Tipografía autoalojada: Figtree
 
 ## Cómo correrlo
 
@@ -28,37 +30,31 @@ npm run build    # compila a dist/
 ```
 src/
 ├─ app/                 App.tsx: orden de las secciones
-├─ sections/            Una sección de la página por archivo (Header, Hero, Treatments, Cases, ...)
+├─ sections/            Una sección por archivo (Header, Hero, TrustStrip, Treatments, Cases, ...)
 ├─ components/
-│  ├─ brand/            Logo y logomark (rebranding)
-│  ├─ odontogram/       Odontograma interactivo, diente, ficha de casos
-│  └─ booking/          Formulario de reserva, vista previa de WhatsApp, barra móvil
+│  ├─ brand/            Logo y logomark
+│  └─ booking/          Tarjeta de citas y botón flotante de WhatsApp
 ├─ shared/
 │  ├─ ui/               Button, Container, Reveal, SectionHeading, SourceTag, iconos
 │  ├─ hooks/            useScrolled
-│  └─ lib/              whatsapp.ts (arma los mensajes), cn.ts
+│  └─ lib/              whatsapp.ts (arma los mensajes), photos.ts (fotos), cn.ts
+├─ assets/photos/       Fotos (Unsplash, referenciales)
 ├─ brand/               Hoja del sistema de marca (/brand.html)
-├─ data/                Todo el contenido: clínica, tratamientos, casos, equipo, FAQ, dientes
+├─ data/                Todo el contenido: clínica, tratamientos, casos, equipo, FAQ
 └─ styles/              globals.css con los tokens de diseño
 ```
 
-Todo el texto vive en `src/data/`. Para adaptar el prototipo a otra clínica basta con editar esos archivos.
-
-## Marca y Figma
-
-- `/brand.html` (código en `src/brand/`): hoja del sistema de marca con logo, paleta, tipografía, notación del odontograma y componentes, armada con los componentes reales.
-- `design/figma/`: versiones estáticas y autocontenidas (estilos y fuentes incrustados) de la landing en escritorio 1440 y móvil 390, y de la hoja de marca. Son las que se convierten en capas editables de Figma.
-- `DESIGN.md`: el sistema de diseño documentado (tokens, tipografía, componentes, movimiento).
+Todo el texto vive en `src/data/`. Para cambiar las fotos basta con reemplazar los archivos de `src/assets/photos/` manteniendo sus nombres.
 
 ## Contenido real vs. de ejemplo
 
 Cada dato lleva su origen (`source`) y la página lo muestra con una etiqueta:
 
-| Real (redes de la clínica) | De ejemplo (reemplazar) |
+| Real (redes de la clínica) | De ejemplo o referencial (reemplazar) |
 | --- | --- |
-| Nombre, dirección, teléfono/WhatsApp, correo | Nombres del equipo y especialidades |
-| Instagram @odontoplus_vmt y Facebook /odontoplusvmt | Testimonios |
-| 100 % de recomendación en Facebook (7 opiniones) | Horario de atención |
+| Nombre, dirección, teléfono/WhatsApp, correo | Fotos (Unsplash, licencia libre; el origen va dentro de cada archivo) |
+| Instagram @odontoplus_vmt y Facebook /odontoplusvmt | Nombres del equipo y especialidades |
+| 100 % de recomendación en Facebook (7 opiniones) | Testimonios y horario de atención |
 | Tratamientos y casos publicados en Instagram | Limpieza y odontología para niños |
 
-**Pendiente del cliente:** fotos del equipo y del local, número de colegiatura (COP), horario real, testimonios reales y precios o promociones.
+**Pendiente del cliente:** fotos del local y del equipo, número de colegiatura (COP), horario real, testimonios reales y precios o promociones.

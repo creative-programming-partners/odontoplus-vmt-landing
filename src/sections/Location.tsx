@@ -1,4 +1,4 @@
-import { Mail, Navigation, Phone } from 'lucide-react'
+import { Clock, Mail, MapPin, Navigation, Phone } from 'lucide-react'
 import { clinic } from '../data/clinic'
 import { ButtonLink } from '../shared/ui/Button'
 import { Container } from '../shared/ui/Container'
@@ -8,71 +8,87 @@ import { SourceTag } from '../shared/ui/SourceTag'
 
 export function Location() {
   return (
-    <section id="ubicacion" aria-labelledby="ubicacion-title" className="border-t border-ink/15 bg-paper-2/60 py-20 md:py-28">
-      <Container className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+    <section id="ubicacion" aria-labelledby="ubicacion-title" className="bg-mist py-20 md:py-28">
+      <Container className="grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5">
           <SectionHeading
             id="ubicacion-title"
-            title="Estamos en Pachacútec"
-            intro="Segundo piso, sobre la avenida. Si vienes por primera vez, escríbenos al llegar y te indicamos la entrada."
+            title="Cómo llegar"
+            intro="Estamos en el segundo piso, sobre la avenida Pachacútec. Si vienes por primera vez, escríbenos al llegar y te indicamos la entrada."
           />
 
-          <dl className="mt-10 grid gap-6 border-t-2 border-ink pt-6">
-            <div>
-              <dt className="font-mono text-[0.68rem] tracking-wider text-ink-3 uppercase">Dirección</dt>
-              <dd className="wdth-wide mt-1 text-xl font-bold">{clinic.address}</dd>
-              <dd className="text-ink-2">{clinic.reference}</dd>
-            </div>
-            <div>
-              <dt className="flex items-center gap-3 font-mono text-[0.68rem] tracking-wider text-ink-3 uppercase">
-                Horario <SourceTag source={clinic.hours.source} />
-              </dt>
-              <dd className="mt-2">
-                <table className="w-full text-left">
-                  <tbody>
-                    {clinic.hours.rows.map((r) => (
-                      <tr key={r.days} className="border-b border-ink/10 last:border-0">
-                        <th scope="row" className="py-2 pr-3 font-medium whitespace-nowrap">
-                          {r.days}
-                        </th>
-                        <td className="tabular py-2 text-right font-mono text-[0.78rem] whitespace-nowrap text-ink-2 sm:text-sm">
-                          {r.time}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </dd>
-            </div>
-            <div className="grid gap-3">
-              <a href={`tel:+${clinic.whatsapp}`} className="inline-flex items-center gap-2 font-semibold underline decoration-ink/25 hover:decoration-ink">
-                <Phone className="size-4 text-ink-3" aria-hidden /> {clinic.phoneDisplay}
+          <dl className="mt-8 grid gap-3">
+            <InfoRow icon={MapPin} label="Dirección">
+              <span className="font-bold">{clinic.address}</span>
+              <span className="block text-ink-3">{clinic.reference}</span>
+            </InfoRow>
+            <InfoRow icon={Clock} label="Horario" tag={<SourceTag source={clinic.hours.source} />}>
+              <table className="w-full text-left">
+                <tbody>
+                  {clinic.hours.rows.map((r) => (
+                    <tr key={r.days}>
+                      <th scope="row" className="py-0.5 pr-3 font-semibold whitespace-nowrap">
+                        {r.days}
+                      </th>
+                      <td className="tabular py-0.5 text-right text-ink-2">{r.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </InfoRow>
+            <InfoRow icon={Phone} label="Teléfono y WhatsApp">
+              <a href={`tel:+${clinic.whatsapp}`} className="font-bold underline decoration-ink/20 hover:decoration-ink">
+                {clinic.phoneDisplay}
               </a>
-              <a href={`mailto:${clinic.email}`} className="inline-flex min-w-0 items-center gap-2 font-semibold underline decoration-ink/25 hover:decoration-ink">
-                <Mail className="size-4 shrink-0 text-ink-3" aria-hidden />
-                <span className="truncate">{clinic.email}</span>
+            </InfoRow>
+            <InfoRow icon={Mail} label="Correo">
+              <a href={`mailto:${clinic.email}`} className="font-bold break-all underline decoration-ink/20 hover:decoration-ink">
+                {clinic.email}
               </a>
-            </div>
+            </InfoRow>
           </dl>
 
           <ButtonLink href={clinic.mapsUrl} variant="primary" size="lg" className="mt-8">
             <Navigation className="size-5" aria-hidden />
-            Cómo llegar
+            Abrir en Google Maps
           </ButtonLink>
         </div>
 
         <Reveal className="lg:col-span-7">
-          <div className="relative h-full min-h-[360px] overflow-hidden rounded-[14px] border border-ink/20 bg-paper-2 lg:min-h-[560px]">
+          <div className="relative h-full min-h-[360px] overflow-hidden rounded-[var(--radius-photo)] bg-mist-2 shadow-[var(--shadow-soft)] lg:min-h-[600px]">
             <iframe
               title="Mapa de OdontoPlus VMT en Av. Pachacútec 2818"
               src={clinic.mapsEmbed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 size-full border-0 [filter:grayscale(0.55)_contrast(1.05)]"
+              className="absolute inset-0 size-full border-0"
             />
           </div>
         </Reveal>
       </Container>
     </section>
+  )
+}
+
+type InfoRowProps = {
+  icon: typeof MapPin
+  label: string
+  tag?: React.ReactNode
+  children: React.ReactNode
+}
+
+function InfoRow({ icon: Icon, label, tag, children }: InfoRowProps) {
+  return (
+    <div className="flex gap-4 rounded-[var(--radius-card)] bg-white p-4 shadow-[var(--shadow-soft)]">
+      <span className="grid size-11 shrink-0 place-items-center rounded-full bg-celeste-soft text-celeste-deep">
+        <Icon className="size-5" aria-hidden />
+      </span>
+      <div className="min-w-0 flex-1">
+        <dt className="mb-1 flex flex-wrap items-center gap-2 text-sm font-semibold text-ink-3">
+          {label} {tag}
+        </dt>
+        <dd>{children}</dd>
+      </div>
+    </div>
   )
 }

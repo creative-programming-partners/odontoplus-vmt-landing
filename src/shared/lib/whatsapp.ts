@@ -13,8 +13,10 @@ export function composeBookingMessage(draft: BookingDraft): string {
   const lines = [
     `Hola ${clinic.name} ${clinic.suffix}, quiero reservar una cita.`,
     draft.name.trim() ? `Mi nombre: ${draft.name.trim()}` : null,
-    draft.treatment ? `Tratamiento: ${draft.treatment}` : null,
-    draft.day ? `Día preferido: ${draft.day}${draft.shift ? `, ${draft.shift.toLowerCase()}` : ''}` : null,
+    draft.treatment ? `Motivo: ${draft.treatment}` : null,
+    draft.day || draft.shift
+      ? `Me acomoda: ${[draft.day, draft.shift && `por la ${draft.shift.toLowerCase()}`].filter(Boolean).join(' ')}`
+      : null,
     draft.note.trim() ? `Comentario: ${draft.note.trim()}` : null,
   ]
   return lines.filter(Boolean).join('\n')

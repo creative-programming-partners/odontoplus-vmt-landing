@@ -3,56 +3,67 @@ import type { Treatment } from './types'
 export const treatments: Treatment[] = [
   {
     id: 'endodoncia',
-    name: 'Endodoncia y retratamiento',
-    solves: 'Dolor fuerte, nervio dañado o una endodoncia antigua que falló',
+    name: 'Endodoncia',
+    solves: 'Dolor fuerte de muela o una endodoncia antigua que volvió a molestar',
     visits: '1 a 3 citas',
-    detail:
-      'Limpiamos y sellamos los conductos del diente para salvarlo en lugar de extraerlo. También rehacemos endodoncias antiguas que volvieron a dar molestias.',
+    detail: 'Salvamos el diente en lugar de sacarlo: limpiamos y sellamos sus conductos, con anestesia y sin apuro.',
+    photo: 'endodoncia',
     source: 'instagram',
   },
   {
     id: 'resinas',
     name: 'Resinas estéticas',
-    solves: 'Caries, dientes rotos y resinas antiguas manchadas',
+    solves: 'Caries, dientes rotos y resinas viejas o manchadas',
     visits: '1 cita por pieza',
-    detail:
-      'Reemplazamos amalgamas y resinas viejas por resina del color exacto de tu diente, también en los dientes de adelante.',
+    detail: 'Cambiamos amalgamas y resinas antiguas por resina del color exacto de tu diente, también adelante.',
+    photo: 'resinas',
     source: 'instagram',
   },
   {
     id: 'coronas',
     name: 'Coronas',
-    solves: 'Dientes muy destruidos o debilitados después de una endodoncia',
+    solves: 'Dientes muy destruidos o débiles después de una endodoncia',
     visits: '2 a 3 citas',
-    detail:
-      'Coronas de metal-porcelana que devuelven la forma y la fuerza al diente para que vuelvas a masticar con confianza.',
+    detail: 'Coronas de metal-porcelana que devuelven forma y fuerza para masticar tranquilo.',
+    photo: 'coronas',
     source: 'instagram',
   },
   {
     id: 'rehabilitacion',
     name: 'Rehabilitación oral',
-    solves: 'Varias piezas dañadas o perdidas al mismo tiempo',
+    solves: 'Varias piezas dañadas o perdidas',
     visits: 'Plan por etapas',
-    detail:
-      'Combinamos postes, resinas y coronas en un plan completo, explicado paso a paso y con presupuesto por etapas.',
+    detail: 'Postes, resinas y coronas en un plan completo, explicado paso a paso.',
+    photo: 'rehabilitacion',
     source: 'instagram',
   },
   {
     id: 'limpieza',
-    name: 'Limpieza y prevención',
-    solves: 'Sarro, sangrado de encías y mal aliento',
+    name: 'Limpieza dental',
+    solves: 'Sarro, encías que sangran y mal aliento',
     visits: '1 cita',
-    detail:
-      'Profilaxis, destartraje y revisión general. El mejor momento para detectar problemas antes de que duelan.',
+    detail: 'Profilaxis y revisión general para detectar problemas antes de que duelan.',
+    photo: 'limpieza',
     source: 'ejemplo',
   },
   {
-    id: 'familia',
+    id: 'ninos',
     name: 'Odontología para niños',
-    solves: 'Primeras visitas, caries infantiles y sellantes',
+    solves: 'Primeras visitas, caries de leche y sellantes',
     visits: '1 a 2 citas',
-    detail:
-      'Atención paciente para que los más pequeños de la casa pierdan el miedo al dentista desde la primera visita.',
+    detail: 'Atención paciente para que los más pequeños pierdan el miedo al dentista.',
+    photo: 'ninoRevision',
     source: 'ejemplo',
   },
+]
+
+/** Options offered on the appointment card. */
+export const bookingTreatments = [
+  'Evaluación',
+  'Dolor de muela',
+  'Endodoncia',
+  'Resinas',
+  'Coronas',
+  'Limpieza',
+  'Niños',
 ]

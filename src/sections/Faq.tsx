@@ -1,4 +1,4 @@
-import { Plus } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useId, useState } from 'react'
 import { faqs } from '../data/content'
 import { cn } from '../shared/lib/cn'
@@ -12,49 +12,45 @@ export function Faq() {
 
   return (
     <section id="preguntas" aria-labelledby="preguntas-title" className="py-20 md:py-28">
-      <Container className="grid gap-12 lg:grid-cols-12">
+      <Container className="grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-4">
-          <div className="lg:sticky lg:top-28">
-            <SectionHeading id="preguntas-title" title="Preguntas frecuentes" />
-            <p className="mt-5 text-ink-2">
-              ¿No está tu pregunta?{' '}
-              <a
-                href={quickMessage()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-whatsapp underline decoration-whatsapp/30 hover:decoration-whatsapp"
-              >
-                Escríbenos por WhatsApp
-              </a>
-              .
-            </p>
-          </div>
+          <SectionHeading id="preguntas-title" title="Preguntas frecuentes" />
+          <p className="mt-4 text-lg text-ink-2">
+            ¿No está tu pregunta?{' '}
+            <a
+              href={quickMessage()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-whatsapp underline decoration-whatsapp/30 hover:decoration-whatsapp"
+            >
+              Escríbenos por WhatsApp
+            </a>
+            .
+          </p>
         </div>
 
-        <ul className="border-t-2 border-ink lg:col-span-8">
+        <ul className="grid gap-3 lg:col-span-8">
           {faqs.map((f, i) => {
             const isOpen = open === i
             const panelId = `${baseId}-${i}`
             return (
-              <li key={f.question} className="border-b border-ink/15">
+              <li key={f.question} className="rounded-[var(--radius-card)] border border-line bg-white">
                 <h3>
                   <button
                     type="button"
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpen(isOpen ? null : i)}
-                    className="group flex w-full items-center justify-between gap-6 py-5 text-left"
+                    className="flex w-full items-center justify-between gap-6 px-5 py-4 text-left md:px-6 md:py-5"
                   >
-                    <span className="text-lg font-semibold md:text-xl">{f.question}</span>
-                    <span
+                    <span className="text-lg font-bold">{f.question}</span>
+                    <ChevronDown
                       aria-hidden
                       className={cn(
-                        'grid size-10 shrink-0 place-items-center rounded-full border border-ink/20 transition-[transform,background-color,color] duration-200 ease-[var(--ease-out-strong)]',
-                        isOpen ? 'rotate-45 bg-ink text-paper' : '[@media(hover:hover)]:group-hover:border-ink',
+                        'size-5 shrink-0 text-ink-3 transition-transform duration-200 ease-[var(--ease-out-strong)]',
+                        isOpen && 'rotate-180',
                       )}
-                    >
-                      <Plus className="size-5" />
-                    </span>
+                    />
                   </button>
                 </h3>
                 <div
@@ -65,7 +61,7 @@ export function Faq() {
                   )}
                 >
                   <div className="overflow-hidden" inert={!isOpen}>
-                    <p className="max-w-[62ch] pb-6 text-ink-2">{f.answer}</p>
+                    <p className="max-w-[62ch] px-5 pb-5 text-ink-2 md:px-6">{f.answer}</p>
                   </div>
                 </div>
               </li>

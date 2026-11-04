@@ -33,14 +33,15 @@ A neighbourhood clinic on Av. Pachacútec that shows its real clinical work: res
 
 ## Capabilities and Constraints
 
-- Primary action: short form (name, treatment, preferred day/time) that opens WhatsApp with a composed message.
+- Primary action: the hero appointment card (treatment, preferred day, shift) that opens WhatsApp with a composed message. No field is required. The name field was dropped on 2026-11-04: WhatsApp already shows who is writing, and removing it keeps the booking button inside the first viewport on 1280×720 screens.
 - All copy lives in data files so the prototype can be re-skinned.
 - Language: Spanish (Peru).
 
 ## Brand Commitments
 
 - Name stays "OdontoPlus VMT". The logo is redesigned (rebrand approved by the user); the navy-blue heritage may be kept or evolved.
-- Tagline seen on Facebook cover: "para toda la familia".
+- Tagline seen on Facebook cover: "para toda la familia". Facebook description: "¿Estás buscando un consultorio que te brinde confianza y garantía?"
+- Standing preference (user, 2026-11-04, after rejecting the abstract "odontograma" concept): clarity over concept. A first-time visitor must understand within seconds that this is a dental clinic in VMT and how to book. Familiar register: real photos, plain headline, booking visible in the first viewport ("Reserva a la vista"). No interactive tooth chart.
 
 ## Evidence on Hand
 

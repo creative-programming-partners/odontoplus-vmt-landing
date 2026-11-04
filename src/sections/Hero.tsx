@@ -1,122 +1,97 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { MapPin, Star } from 'lucide-react'
 import { clinic } from '../data/clinic'
-import { ChartPanel } from '../components/odontogram/ChartPanel'
+import { AppointmentCard } from '../components/booking/AppointmentCard'
+import { photos } from '../shared/lib/photos'
 import { quickMessage } from '../shared/lib/whatsapp'
 import { ButtonLink } from '../shared/ui/Button'
 import { Container } from '../shared/ui/Container'
 import { WhatsappIcon } from '../shared/ui/icons'
+import { PhotoNote } from '../shared/ui/PhotoNote'
 
 const ease = [0.23, 1, 0.32, 1] as const
 
 export function Hero() {
   const reduce = useReducedMotion()
-  const enter = (delay: number) =>
+  const enter = (delay: number, y = 12) =>
     reduce
       ? {}
       : {
-          initial: { opacity: 0, transform: 'translateY(12px)' },
+          initial: { opacity: 0, transform: `translateY(${y}px)` },
           animate: { opacity: 1, transform: 'translateY(0px)' },
           transition: { duration: 0.7, delay, ease },
         }
 
   return (
-    <section id="inicio" aria-labelledby="hero-title" className="relative overflow-hidden">
-      <Container className="grid grid-cols-[minmax(0,1fr)] gap-6 pt-5 pb-14 sm:gap-10 md:pt-12 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-12 lg:gap-y-10 lg:pt-16 lg:pb-16">
-        <div className="flex flex-col lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:pt-6">
+    <section id="inicio" aria-labelledby="hero-title" className="bg-linear-to-b from-mist to-white">
+      <Container className="grid grid-cols-[minmax(0,1fr)] gap-8 pt-6 pb-12 md:pt-10 lg:grid-cols-12 lg:gap-x-12 lg:pt-10 lg:pb-10">
+        {/* text + card */}
+        <div className="lg:col-span-7">
           <motion.h1
             id="hero-title"
             {...enter(0)}
-            className="text-[clamp(2.35rem,4.6vw,4.6rem)] font-[800] tracking-[-0.035em]"
+            className="text-[clamp(2.3rem,4.2vw,3.4rem)] font-[800] tracking-[-0.035em]"
           >
-            Tratamos tu sonrisa{' '}
-            <span className="text-mark-blue">
-              diente por{' '}
-              <span className="relative whitespace-nowrap">
-                diente.
-                <PenUnderline />
-              </span>
-            </span>
+            Tu dentista <span className="text-celeste">de confianza</span> en Villa María del Triunfo
           </motion.h1>
-
-          <motion.p {...enter(0.08)} className="mt-4 max-w-[46ch] text-[1.05rem] text-ink-2 sm:mt-6 sm:text-lg md:text-xl">
-            Clínica dental para toda la familia en Villa María del Triunfo. Te mostramos qué tiene cada
-            pieza, cómo se trata y por dónde empezar.
+          <motion.p {...enter(0.07)} className="mt-4 max-w-[48ch] text-lg text-ink-2 md:text-[1.2rem]">
+            Endodoncias, resinas, coronas y limpiezas para toda la familia. Estamos en{' '}
+            <strong className="font-semibold text-ink">Av. Pachacútec 2818, 2.º&nbsp;piso</strong>.
           </motion.p>
 
-          <motion.div {...enter(0.16)} className="mt-5 flex flex-wrap items-center gap-3 sm:mt-8">
-            <ButtonLink href={quickMessage()} variant="whatsapp" size="lg" className="max-sm:w-full">
+          {/* phones: a direct button before the photo, the card comes right after */}
+          <motion.div {...enter(0.12)} className="mt-6 lg:hidden">
+            <ButtonLink href={quickMessage()} variant="whatsapp" size="lg" className="w-full sm:w-auto">
               <WhatsappIcon className="size-5" />
               Reservar por WhatsApp
             </ButtonLink>
-            <a
-              href="#tratamientos"
-              className="hidden rounded-full px-4 py-3 font-semibold text-ink underline decoration-ink/30 hover:decoration-ink sm:inline"
-            >
-              Ver tratamientos
-            </a>
+          </motion.div>
+
+          <motion.div {...enter(0.16, 18)} className="mt-7 hidden lg:block">
+            <AppointmentCard />
           </motion.div>
         </div>
 
-        <motion.dl
-          {...enter(0.24)}
-          className="max-lg:order-3 grid gap-4 border-t border-ink/15 pt-6 sm:grid-cols-2 lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:self-start"
-        >
-          <div className="flex gap-3">
-            <MapPin className="mt-0.5 size-5 shrink-0 text-ink-3" aria-hidden />
-            <div>
-              <dt className="sr-only">Dirección</dt>
-              <dd className="font-semibold">{clinic.address}</dd>
-              <dd className="text-sm text-ink-3">{clinic.reference}</dd>
-            </div>
+        {/* photo + trust */}
+        <motion.div {...enter(0.1, 18)} className="flex flex-col gap-4 lg:col-span-5">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-photo)] bg-mist-2 lg:aspect-auto lg:min-h-[460px] lg:flex-1">
+            <img
+              src={photos.heroConsulta.src}
+              alt={photos.heroConsulta.alt}
+              width={1600}
+              height={1067}
+              fetchPriority="high"
+              className="absolute inset-0 size-full object-cover object-[42%_center]"
+            />
+            <PhotoNote />
           </div>
-          <div className="flex gap-3">
-            <Star className="mt-0.5 size-5 shrink-0 text-ink-3" aria-hidden />
-            <div>
-              <dt className="sr-only">Opiniones</dt>
-              <dd className="font-semibold">{clinic.rating.label}</dd>
-              <dd className="text-sm text-ink-3">{clinic.rating.detail} de pacientes</dd>
+          <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-[var(--shadow-soft)]">
+              <span className="grid size-11 shrink-0 place-items-center rounded-full bg-celeste-soft text-celeste-deep">
+                <Star className="size-5" fill="currentColor" aria-hidden />
+              </span>
+              <div className="leading-tight">
+                <dt className="font-bold">{clinic.rating.label}</dt>
+                <dd className="text-sm text-ink-3">{clinic.rating.detail}</dd>
+              </div>
             </div>
-          </div>
-        </motion.dl>
-
-        <motion.div
-          className="max-lg:order-2 lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1"
-          {...(reduce
-            ? {}
-            : {
-                initial: { opacity: 0, transform: 'translateY(18px) scale(0.985)' },
-                animate: { opacity: 1, transform: 'translateY(0px) scale(1)' },
-                transition: { duration: 0.8, delay: 0.12, ease },
-              })}
-        >
-          <ChartPanel />
+            <div className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-[var(--shadow-soft)]">
+              <span className="grid size-11 shrink-0 place-items-center rounded-full bg-celeste-soft text-celeste-deep">
+                <MapPin className="size-5" aria-hidden />
+              </span>
+              <div className="leading-tight">
+                <dt className="font-bold">Av. Pachacútec 2818</dt>
+                <dd className="text-sm text-ink-3">2.º piso · {clinic.district}</dd>
+              </div>
+            </div>
+          </dl>
         </motion.div>
+
+        {/* phones: the card after the photo */}
+        <div className="lg:hidden">
+          <AppointmentCard />
+        </div>
       </Container>
     </section>
-  )
-}
-
-/** A ballpoint underline drawn once, like a dentist marking a chart. */
-function PenUnderline() {
-  const reduce = useReducedMotion()
-  return (
-    <svg
-      viewBox="0 0 300 14"
-      preserveAspectRatio="none"
-      className="pointer-events-none absolute -bottom-2 left-0 h-3 w-full"
-      aria-hidden
-    >
-      <motion.path
-        d="M3 9.5C60 4.5 140 3 200 5.2c36 1.3 70 3.6 97 2.2"
-        fill="none"
-        stroke="var(--color-mark-red)"
-        strokeWidth="3"
-        strokeLinecap="round"
-        initial={reduce ? false : { pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.9, delay: 0.55, ease: [0.77, 0, 0.175, 1] }}
-      />
-    </svg>
   )
 }

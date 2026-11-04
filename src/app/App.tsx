@@ -1,6 +1,6 @@
-import { MobileBookingBar } from '../components/booking/MobileBookingBar'
-import { Booking } from '../sections/Booking'
+import { FloatingWhatsapp } from '../components/booking/FloatingWhatsapp'
 import { Cases } from '../sections/Cases'
+import { CtaBand } from '../sections/CtaBand'
 import { Faq } from '../sections/Faq'
 import { FirstVisit } from '../sections/FirstVisit'
 import { Footer } from '../sections/Footer'
@@ -16,7 +16,7 @@ export function App() {
     <>
       <a
         href="#contenido"
-        className="sr-only z-50 rounded-md bg-ink px-4 py-2 text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+        className="sr-only z-50 rounded-md bg-ink px-4 py-2 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
       >
         Saltar al contenido
       </a>
@@ -28,12 +28,12 @@ export function App() {
         <FirstVisit />
         <Team />
         <Testimonials />
-        <Booking />
+        <CtaBand />
         <Faq />
         <Location />
       </main>
       <Footer />
-      <MobileBookingBar />
+      <FloatingWhatsapp />
     </>
   )
 }

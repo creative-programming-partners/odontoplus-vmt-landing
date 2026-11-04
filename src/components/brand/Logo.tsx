@@ -1,57 +1,50 @@
 import { cn } from '../../shared/lib/cn'
 
-type MarkProps = { className?: string; tone?: 'ink' | 'paper' }
+type MarkProps = { className?: string; tone?: 'ink' | 'white' }
 
 /**
- * OdontoPlus mark: the five-surface tooth square every dentist draws on a chart,
- * with its centre (the occlusal surface) turned into a plus.
+ * OdontoPlus mark: a friendly tooth with a celeste "plus" badge.
+ * It keeps the idea of the clinic's original logo (tooth + plus) and makes it read at any size.
  */
 export function Logomark({ className, tone = 'ink' }: MarkProps) {
-  const stroke = tone === 'ink' ? 'var(--color-ink)' : 'var(--color-paper)'
+  const tooth = tone === 'ink' ? 'var(--color-ink)' : '#ffffff'
+  const ring = tone === 'ink' ? '#ffffff' : 'var(--color-ink)'
   return (
     <svg viewBox="0 0 48 48" className={cn('shrink-0', className)} aria-hidden>
-      <rect x="3" y="3" width="42" height="42" rx="9" fill="none" stroke={stroke} strokeWidth="3.2" />
       <path
-        d="M7.5 7.5 13 13M40.5 7.5 35 13M7.5 40.5 13 35M40.5 40.5 35 35"
-        stroke={stroke}
-        strokeWidth="2.4"
-        strokeLinecap="round"
+        d="M15.2 6.5c-5.6 0-9.7 4.4-9.7 10.4 0 4.6 1.8 7.4 2.9 11.6 1.3 5 1.4 13 5.5 13 3.7 0 3.3-8.6 7.6-8.6h.1c4.3 0 3.9 8.6 7.6 8.6 4.1 0 4.2-8 5.5-13 1.1-4.2 2.9-7 2.9-11.6 0-6-4.1-10.4-9.7-10.4-3.1 0-4.3 1.6-6.4 1.6s-3.3-1.6-6.3-1.6Z"
+        fill={tooth}
       />
-      <path
-        d="M20 12.5h8V20h7.5v8H28v7.5h-8V28h-7.5v-8H20Z"
-        fill="var(--color-mark-blue)"
-        stroke="var(--color-mark-blue)"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
+      <circle cx="36.5" cy="12" r="9.5" fill="var(--color-celeste)" stroke={ring} strokeWidth="2.5" />
+      <path d="M36.5 7.6v8.8M32.1 12h8.8" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" />
     </svg>
   )
 }
 
-type LogoProps = { className?: string; tone?: 'ink' | 'paper'; size?: 'sm' | 'lg' }
+type LogoProps = { className?: string; tone?: 'ink' | 'white'; size?: 'sm' | 'lg' }
 
 export function Logo({ className, tone = 'ink', size = 'sm' }: LogoProps) {
   return (
-    <span className={cn('inline-flex items-center gap-2.5', className)}>
-      <Logomark tone={tone} className={size === 'sm' ? 'size-9' : 'size-14'} />
-      <span className="flex items-baseline gap-1.5 leading-none">
+    <span className={cn('inline-flex items-center gap-2', className)}>
+      <Logomark tone={tone} className={size === 'sm' ? 'size-10' : 'size-16'} />
+      <span className="flex flex-col leading-none">
         <span
           className={cn(
-            'wdth-wide font-[780] tracking-[-0.03em]',
-            size === 'sm' ? 'text-[1.3rem]' : 'text-[2rem]',
-            tone === 'ink' ? 'text-ink' : 'text-paper',
+            'font-[800] tracking-[-0.03em]',
+            size === 'sm' ? 'text-[1.35rem]' : 'text-[2.2rem]',
+            tone === 'ink' ? 'text-ink' : 'text-white',
           )}
         >
-          Odonto<span className="text-mark-blue">plus</span>
+          Odonto<span className="text-celeste">Plus</span>
         </span>
         <span
           className={cn(
-            'rounded-[3px] border px-1 py-[3px] font-mono font-semibold tracking-wider',
-            size === 'sm' ? 'text-[0.6rem]' : 'text-[0.8rem]',
-            tone === 'ink' ? 'border-ink/40 text-ink' : 'border-paper/50 text-paper',
+            'mt-0.5 font-bold tracking-[0.28em]',
+            size === 'sm' ? 'text-[0.6rem]' : 'text-[0.85rem]',
+            tone === 'ink' ? 'text-ink-3' : 'text-white/70',
           )}
         >
-          VMT
+          VMT · CLÍNICA DENTAL
         </span>
       </span>
     </span>

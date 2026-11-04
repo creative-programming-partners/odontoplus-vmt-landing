@@ -34,8 +34,7 @@ export const clinic = {
 export const navLinks = [
   { href: '#tratamientos', label: 'Tratamientos' },
   { href: '#casos', label: 'Casos' },
-  { href: '#como-es', label: 'Tu primera cita' },
-  { href: '#equipo', label: 'Equipo' },
-  { href: '#preguntas', label: 'Preguntas' },
+  { href: '#primera-cita', label: 'Tu primera cita' },
+  { href: '#opiniones', label: 'Opiniones' },
   { href: '#ubicacion', label: 'Ubícanos' },
 ] as const
