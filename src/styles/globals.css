@@ -1,0 +1,128 @@
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/martian-mono/index.css';
+@import 'tailwindcss';
+
+/* Design tokens: the dental chart (odontograma) world */
+@theme {
+  --color-paper: #f4f6f3;
+  --color-paper-2: #e9ede8;
+  --color-rule: #d3dad4;
+  --color-rule-strong: #b4beb7;
+  --color-ink: #14254f;
+  --color-ink-2: #3d4a6b;
+  --color-ink-3: #5d6884;
+  --color-night: #0f1c3d;
+  --color-night-2: #1b2b55;
+  --color-mark-red: #d7263d;
+  --color-mark-red-soft: #f7d9dd;
+  --color-mark-blue: #1f5fd1;
+  --color-mark-blue-soft: #d9e4f8;
+  --color-whatsapp: #1c8f4e;
+
+  --font-sans: 'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Martian Mono Variable', 'Martian Mono', ui-monospace, monospace;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-variation-settings: 'wdth' 100;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-variation-settings: 'wdth' 112;
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    line-height: 1.04;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-mark-blue);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mark-blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  input,
+  select,
+  textarea {
+    caret-color: var(--color-mark-red);
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+
+  html {
+    scrollbar-color: var(--color-rule-strong) var(--color-paper);
+  }
+}
+
+@layer components {
+  /* The chart paper: a faint printed grid */
+  .chart-grid {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-rule) 60%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-rule) 60%, transparent) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wdth-wide {
+    font-variation-settings: 'wdth' 125;
+  }
+
+  .wdth-narrow {
+    font-variation-settings: 'wdth' 88;
+  }
+}
+
+/* Pressable feedback (Emil): instant, subtle */
+.press {
+  transition:
+    transform 160ms var(--ease-out-strong),
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .press:active {
+    transform: none;
+  }
+}
