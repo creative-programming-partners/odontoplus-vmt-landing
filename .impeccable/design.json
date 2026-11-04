@@ -1,437 +1,158 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-04T04:23:37+00:00",
+  "generatedAt": "2026-11-04T00:00:00Z",
   "title": "Design System: OdontoPlus VMT",
   "extensions": {
     "colorMeta": {
-      "paper": {
-        "role": "neutral",
-        "displayName": "Chart Paper",
-        "canonical": "oklch(97.1% 0.004 134.8)",
-        "tonalRamp": [
-          "#0a0c0a",
-          "#252725",
-          "#444643",
-          "#656764",
-          "#888a87",
-          "#adaeac",
-          "#d0d1cf",
-          "#eeefed"
-        ]
-      },
-      "paper-2": {
-        "role": "neutral",
-        "displayName": "Paper Shade",
-        "canonical": "oklch(94.2% 0.008 139.4)",
-        "tonalRamp": [
-          "#090c09",
-          "#242724",
-          "#434642",
-          "#646763",
-          "#878a86",
-          "#abafaa",
-          "#cfd2cf",
-          "#edefec"
-        ]
-      },
-      "rule": {
-        "role": "neutral",
-        "displayName": "Hairline Rule",
-        "canonical": "oklch(88.1% 0.011 149.8)",
-        "tonalRamp": [
-          "#080d09",
-          "#232824",
-          "#414742",
-          "#626863",
-          "#858b86",
-          "#a9b0aa",
-          "#ced2cf",
-          "#ebf0ec"
-        ]
-      },
-      "rule-strong": {
-        "role": "neutral",
-        "displayName": "Strong Rule",
-        "canonical": "oklch(79.2% 0.015 155.5)",
-        "tonalRamp": [
-          "#070d09",
-          "#212923",
-          "#3f4742",
-          "#606962",
-          "#828c85",
-          "#a7b1aa",
-          "#cdd3ce",
-          "#eaf0ec"
-        ]
-      },
-      "ink": {
-        "role": "primary",
-        "displayName": "Chart Ink Navy",
-        "canonical": "oklch(27.6% 0.080 265.0)",
-        "tonalRamp": [
-          "#01052c",
-          "#13234d",
-          "#304370",
-          "#4f6595",
-          "#7188ba",
-          "#95aee2",
-          "#c2d1f2",
-          "#dfefff"
-        ]
-      },
-      "ink-2": {
-        "role": "neutral",
-        "displayName": "Ink Secondary",
-        "canonical": "oklch(41.3% 0.058 267.4)",
-        "tonalRamp": [
-          "#030823",
-          "#1a2543",
-          "#374464",
-          "#576588",
-          "#7a89ad",
-          "#9eadd4",
-          "#c7d1e9",
-          "#e4eeff"
-        ]
-      },
-      "ink-3": {
-        "role": "neutral",
-        "displayName": "Ink Tertiary",
-        "canonical": "oklch(51.9% 0.046 268.0)",
-        "tonalRamp": [
-          "#04091e",
-          "#1d253d",
-          "#3a445e",
-          "#5b6581",
-          "#7d89a6",
-          "#a1aecc",
-          "#c9d1e4",
-          "#e6eeff"
-        ]
-      },
-      "night": {
-        "role": "primary",
-        "displayName": "Night Band",
-        "canonical": "oklch(23.6% 0.066 265.5)",
-        "tonalRamp": [
-          "#020726",
-          "#172546",
-          "#344468",
-          "#54658c",
-          "#7689b2",
-          "#9aaed9",
-          "#c5d1ec",
-          "#e2efff"
-        ]
-      },
-      "night-2": {
-        "role": "primary",
-        "displayName": "Night Raised",
-        "canonical": "oklch(30.0% 0.079 266.1)",
-        "tonalRamp": [
-          "#01052c",
-          "#14234c",
-          "#31436f",
-          "#516594",
-          "#7388ba",
-          "#97ade1",
-          "#c3d1f1",
-          "#e0efff"
-        ]
-      },
-      "mark-red": {
-        "role": "secondary",
-        "displayName": "Notation Red",
-        "canonical": "oklch(57.1% 0.209 21.1)",
-        "tonalRamp": [
-          "#410000",
-          "#6b0000",
-          "#960004",
-          "#c1002b",
-          "#ed3f4e",
-          "#ff6a72",
-          "#ffafad",
-          "#ffccca"
-        ]
-      },
-      "mark-red-soft": {
-        "role": "secondary",
-        "displayName": "Notation Red Wash",
-        "canonical": "oklch(91.1% 0.034 8.6)",
-        "tonalRamp": [
-          "#170508",
-          "#351f23",
-          "#553e41",
-          "#785e62",
-          "#9c8185",
-          "#c2a6a9",
-          "#deccce",
-          "#fce9ec"
-        ]
-      },
-      "mark-blue": {
-        "role": "tertiary",
-        "displayName": "Notation Blue",
-        "canonical": "oklch(51.6% 0.188 261.0)",
-        "tonalRamp": [
-          "#0a0059",
-          "#00047f",
-          "#0037a7",
-          "#1d5dcf",
-          "#4283f9",
-          "#66aaff",
-          "#a7d2ff",
-          "#c4f0ff"
-        ]
-      },
-      "mark-blue-soft": {
-        "role": "tertiary",
-        "displayName": "Notation Blue Wash",
-        "canonical": "oklch(91.7% 0.030 262.5)",
-        "tonalRamp": [
-          "#050b18",
-          "#1f2635",
-          "#3c4555",
-          "#5d6678",
-          "#808a9c",
-          "#a4aec1",
-          "#cbd1dd",
-          "#e8effb"
-        ]
-      },
-      "whatsapp": {
-        "role": "tertiary",
-        "displayName": "WhatsApp Green",
-        "canonical": "oklch(57.4% 0.139 152.6)",
-        "tonalRamp": [
-          "#001700",
-          "#003700",
-          "#00581a",
-          "#007c3c",
-          "#35a15e",
-          "#5fc782",
-          "#a8e1b7",
-          "#c5ffd4"
-        ]
-      }
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#ffffff", "tonalRamp": ["#262626", "#424242", "#5e5e5e", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#f2f2f2"] },
+      "mist": { "role": "neutral", "displayName": "Cool Mist", "canonical": "#f1f6fa", "tonalRamp": ["#142838", "#234662", "#32638b", "#4081b4", "#699ec9", "#96bbd9", "#c3d8ea", "#ecf3f8"] },
+      "mist-2": { "role": "neutral", "displayName": "Deep Mist", "canonical": "#e3edf4", "tonalRamp": ["#162937", "#25475f", "#356687", "#4584b0", "#6da1c5", "#98bdd7", "#c4d9e8", "#edf3f8"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#d6e1ea", "tonalRamp": ["#1a2733", "#2d4458", "#40617d", "#537ea2", "#789cba", "#a1bacf", "#c9d8e3", "#eef3f6"] },
+      "navy": { "role": "primary", "displayName": "OdontoPlus Navy", "canonical": "#13264f", "tonalRamp": ["#0f1e3e", "#1a336b", "#254998", "#2f5fc5", "#5b82d7", "#8ca8e3", "#bdcdef", "#eaeffa"] },
+      "navy-2": { "role": "primary", "displayName": "Navy Hover", "canonical": "#1c3466", "tonalRamp": ["#101f3c", "#1d3568", "#294b94", "#3562c0", "#5f85d3", "#8fa9e0", "#bfceed", "#ebf0fa"] },
+      "ink-2": { "role": "neutral", "displayName": "Slate", "canonical": "#3c4b6b", "tonalRamp": ["#1b2231", "#303c55", "#445579", "#586e9d", "#7c8fb6", "#a4b0cc", "#cbd2e2", "#eff1f6"] },
+      "ink-3": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#5f6d88", "tonalRamp": ["#1f242d", "#373f4e", "#4e596f", "#657490", "#8793ab", "#abb4c4", "#cfd4dd", "#f0f2f5"] },
+      "celeste": { "role": "secondary", "displayName": "Cover Celeste", "canonical": "#1e9bd7", "tonalRamp": ["#093043", "#105474", "#1777a6", "#1e9bd7", "#4cb4e6", "#82cbee", "#b7e1f5", "#e9f6fc"] },
+      "celeste-deep": { "role": "secondary", "displayName": "Deep Celeste", "canonical": "#0f7db3", "tonalRamp": ["#063147", "#0a557a", "#0f7aae", "#139ee2", "#43b6ef", "#7bccf4", "#b4e2f9", "#e7f6fd"] },
+      "celeste-soft": { "role": "secondary", "displayName": "Celeste Wash", "canonical": "#dff1fa", "tonalRamp": ["#0a3042", "#125273", "#1975a3", "#2198d4", "#4fb2e3", "#83c9ec", "#b8e0f4", "#e9f5fc"] },
+      "whatsapp": { "role": "tertiary", "displayName": "WhatsApp Green", "canonical": "#1c8f4e", "tonalRamp": ["#0d4023", "#166f3c", "#1f9e56", "#28cd70", "#54de90", "#88e8b1", "#bbf2d3", "#eafbf1"] },
+      "whatsapp-deep": { "role": "tertiary", "displayName": "WhatsApp Hover", "canonical": "#177a42", "tonalRamp": ["#0c4023", "#15703c", "#1e9f56", "#27ce6f", "#53df90", "#87e8b1", "#baf2d3", "#eafbf1"] }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Display",
-        "purpose": "Hero H1 and footer statement only."
-      },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "Section H2s."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Register row names, step titles, panel headers; wdth 125."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Running copy at wdth 100, 46-62ch."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Martian Mono uppercase field labels, column headers, legends."
-      },
-      "data": {
-        "displayName": "Data",
-        "purpose": "Martian Mono tabular FDI numbers, visits, hours, phone."
-      }
+      "display": { "displayName": "Display", "purpose": "The hero H1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s and the CTA band." },
+      "title": { "displayName": "Title", "purpose": "Card and treatment names (1.125–1.6rem)." },
+      "body": { "displayName": "Body", "purpose": "Running text, 48–62ch measure." },
+      "label": { "displayName": "Label", "purpose": "Chip-group legends, trust-row titles, stub links." },
+      "tag": { "displayName": "Tag", "purpose": "Provenance tags and Foto referencial pills." }
     },
-    "shadows": [],
+    "shadows": [
+      { "name": "soft", "value": "0 1px 2px rgb(19 38 79 / 0.05), 0 6px 18px -6px rgb(19 38 79 / 0.12)", "purpose": "Resting state of trust tiles, treatment and case cards, menu button and rating badge." },
+      { "name": "card", "value": "0 1px 2px rgb(19 38 79 / 0.06), 0 12px 32px -8px rgb(19 38 79 / 0.18)", "purpose": "The appointment card at rest; elsewhere only as the hover state of a soft card." },
+      { "name": "whatsapp-glow", "value": "0 6px 16px -6px rgb(28 143 78 / 0.55)", "purpose": "Green lift on WhatsApp buttons." },
+      { "name": "whatsapp-float", "value": "0 10px 28px -8px rgb(28 143 78 / 0.6)", "purpose": "Green lift on the floating WhatsApp bubble." }
+    ],
     "motion": [
-      {
-        "name": "ease-out-strong",
-        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
-        "purpose": "Entrances, state changes, crossfades, accordions."
-      },
-      {
-        "name": "ease-in-out-strong",
-        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
-        "purpose": "Pen draws: H1 underline, selected-tooth ring, case leader line."
-      },
-      {
-        "name": "press",
-        "value": "transform: scale(0.97); 160ms ease-out-strong",
-        "purpose": "Active feedback on every pressable; removed under reduced motion."
-      },
-      {
-        "name": "reveal",
-        "value": "opacity + translateY(14px), 0.6s ease-out-strong, once",
-        "purpose": "Scroll entrances; opacity only under reduced motion."
-      },
-      {
-        "name": "blur-crossfade",
-        "value": "opacity + blur(4-6px), 0.28-0.3s ease-out-strong",
-        "purpose": "Swapping chart readings and case panels; opacity only under reduced motion."
-      },
-      {
-        "name": "pen-draw",
-        "value": "pathLength 0 to 1, 0.55-0.9s ease-in-out-strong",
-        "purpose": "Notation marks drawn on like a pen; final state under reduced motion."
-      },
-      {
-        "name": "accordion",
-        "value": "grid-template-rows 0fr to 1fr, 300ms ease-out-strong",
-        "purpose": "Register and FAQ rows."
-      }
+      { "name": "ease-out-strong", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "The single easing for every transition and entrance." },
+      { "name": "press", "value": "transform 160ms ease-out-strong; scale(0.97) on :active", "purpose": "Pressable feedback on buttons, chips and icon buttons; disabled under reduced motion." },
+      { "name": "color-transition", "value": "180ms ease", "purpose": "Background, color, border and shadow changes on pressables." },
+      { "name": "reveal", "value": "opacity 0→1, translateY 14px→0, 600ms, once, 50–60ms stagger", "purpose": "Section content entering on scroll; opacity only under reduced motion." },
+      { "name": "hero-enter", "value": "opacity + translateY 12–18px, 700ms, 70ms steps", "purpose": "Hero H1, promise, card and photo on load." },
+      { "name": "stub-crossfade", "value": "opacity + blur(3px) + translateY 4px, 220ms", "purpose": "Live summary on the appointment-card stub." },
+      { "name": "accordion", "value": "grid-template-rows 0fr→1fr, 300ms", "purpose": "FAQ answer expand and collapse." },
+      { "name": "whatsapp-spring", "value": "spring, duration 0.45s, bounce 0.2; from translateY 12px scale 0.9; exit 150ms", "purpose": "Floating WhatsApp bubble entrance." },
+      { "name": "photo-hover", "value": "scale 1.03, 500ms ease-out-strong, hover-capable devices only", "purpose": "Photos inside treatment cards." }
     ],
     "breakpoints": [
-      {
-        "name": "sm",
-        "value": "640px"
-      },
-      {
-        "name": "md",
-        "value": "768px"
-      },
-      {
-        "name": "lg",
-        "value": "1024px"
-      },
-      {
-        "name": "xl",
-        "value": "1280px"
-      }
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
-      "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Ink pill for the header booking action.",
-      "html": "<button class=\"ds-btn-primary\">Reservar cita</button>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;border:0;border-radius:9999px;background:var(--color-ink,#14254f);color:var(--color-paper,#f4f6f3);font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:0.95rem;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 180ms ease,color 180ms ease,border-color 180ms ease;}.ds-btn-primary:hover{background:var(--color-night-2,#1b2b55)}.ds-btn-primary:active{transform:scale(0.97)}.ds-btn-primary:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}"
-    },
-    {
       "name": "WhatsApp Button",
       "kind": "button",
       "refersTo": "button-whatsapp",
-      "description": "The booking action everywhere; green pill with the WhatsApp glyph.",
-      "html": "<button class=\"ds-btn-wa\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z\"/></svg>Reservar por WhatsApp</button>",
-      "css": ".ds-btn-wa{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 28px;border:0;border-radius:9999px;background:var(--color-whatsapp,#1c8f4e);color:#fff;font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 180ms ease,color 180ms ease,border-color 180ms ease;}.ds-btn-wa:hover{background:#177a42}.ds-btn-wa:active{transform:scale(0.97)}.ds-btn-wa:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}"
+      "description": "The default booking action; green only because it opens WhatsApp.",
+      "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z\"/></svg>Reservar por WhatsApp</a>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 56px; padding: 0 28px; border-radius: 9999px; background: var(--color-whatsapp, #1c8f4e); color: #fff; font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 1.02rem; text-decoration: none; white-space: nowrap; box-shadow: 0 6px 16px -6px rgb(28 143 78 / 0.55); transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease; } .ds-btn-wa:hover { background: var(--color-whatsapp-deep, #177a42); } .ds-btn-wa:active { transform: scale(0.97); } .ds-btn-wa:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Navy pill for non-WhatsApp primary actions.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Ver tratamientos</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 44px; padding: 0 20px; border: 0; border-radius: 9999px; background: var(--color-navy, #13264f); color: #fff; font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease; } .ds-btn-primary:hover { background: var(--color-navy-2, #1c3466); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; }"
     },
     {
       "name": "Outline Button",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Secondary actions such as Ver tratado / Ver antes.",
-      "html": "<button class=\"ds-btn-outline\">Ver tratado</button>",
-      "css": ".ds-btn-outline{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;border:1px solid rgba(20,37,79,.25);border-radius:9999px;background:transparent;color:var(--color-ink,#14254f);font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:0.95rem;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 180ms ease,color 180ms ease,border-color 180ms ease;}.ds-btn-outline:hover{border-color:#14254f;background:rgba(20,37,79,.04)}.ds-btn-outline:active{transform:scale(0.97)}.ds-btn-outline:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}"
+      "description": "Secondary action on light grounds, e.g. call the clinic.",
+      "html": "<button class=\"ds-btn-outline\" type=\"button\">Llamar al 941 972 676</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 20px; border: 2px solid rgb(19 38 79 / 0.15); border-radius: 9999px; background: transparent; color: var(--color-navy, #13264f); font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), border-color 180ms ease; } .ds-btn-outline:hover { border-color: rgb(19 38 79 / 0.4); } .ds-btn-outline:active { transform: scale(0.97); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; }"
     },
     {
-      "name": "Symptom Chip",
+      "name": "Option Chip",
       "kind": "chip",
-      "refersTo": "chip-symptom",
-      "description": "Radio chips naming what the visitor feels; active fills with ink.",
-      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-checked=\"true\">Me duele una muela</button><button class=\"ds-chip\" aria-checked=\"false\">Sensibilidad al frío</button></div>",
-      "css": ".ds-chips{display:flex;gap:6px;flex-wrap:wrap}.ds-chip{min-height:40px;padding:0 12px;border:1px solid rgba(20,37,79,.2);border-radius:9999px;background:transparent;color:var(--color-ink-2,#3d4a6b);font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:.82rem;cursor:pointer;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 180ms ease,color 180ms ease,border-color 180ms ease;}.ds-chip:hover{border-color:rgba(20,37,79,.5)}.ds-chip[aria-checked=true]{background:#14254f;border-color:#14254f;color:#f4f6f3}.ds-chip:active{transform:scale(0.97)}.ds-chip:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}"
+      "refersTo": "chip-option",
+      "description": "Toggle chips on the appointment card; selected fills navy.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">Limpieza</button><button class=\"ds-chip\" type=\"button\" aria-pressed=\"true\">Endodoncia</button><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">Resinas</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; } .ds-chip { height: 40px; padding: 0 14px; border: 2px solid var(--color-line, #d6e1ea); border-radius: 9999px; background: #fff; color: var(--color-ink-2, #3c4b6b); font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease, color 180ms ease, border-color 180ms ease; } .ds-chip:hover { border-color: rgb(19 38 79 / 0.4); } .ds-chip:active { transform: scale(0.97); } .ds-chip[aria-pressed=\"true\"] { background: var(--color-navy, #13264f); border-color: var(--color-navy, #13264f); color: #fff; } .ds-chip:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; }"
     },
     {
-      "name": "Underline Field",
-      "kind": "input",
-      "refersTo": "field-underline",
-      "description": "Printed-form field on the night band: mono label, 2px underline, red caret.",
-      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-field-label\" for=\"ds-n\">Tu nombre</label><input id=\"ds-n\" class=\"ds-field\" placeholder=\"Nombre y apellido\"></div>",
-      "css": ".ds-field-wrap{background:var(--color-night,#0f1c3d);padding:24px}.ds-field-label{display:block;margin-bottom:4px;font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.6)}.ds-field{width:100%;height:48px;padding:0;border:0;border-bottom:2px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;font-size:1.125rem;caret-color:var(--color-mark-red,#d7263d);transition:border-color 150ms}.ds-field::placeholder{color:rgba(255,255,255,.4)}.ds-field:hover{border-bottom-color:rgba(255,255,255,.5)}.ds-field:focus{outline:none;border-bottom-color:#fff}"
-    },
-    {
-      "name": "Chart Header Nav",
-      "kind": "nav",
-      "refersTo": null,
-      "description": "Sticky 68px chart-header bar: logo, links, ink booking pill.",
-      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-logo\">Odonto<b>plus</b> <i>VMT</i></span><span class=\"ds-nav-links\"><a href=\"#\">Tratamientos</a><a href=\"#\">Casos</a><a href=\"#\">Ubicación</a></span><a class=\"ds-nav-cta\" href=\"#\">Reservar cita</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;padding:0 24px;background:var(--color-paper,#f4f6f3);border-bottom:1px solid rgba(20,37,79,.15);font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;}.ds-nav-logo{font-variation-settings:'wdth' 125;font-weight:780;font-size:1.3rem;letter-spacing:-.03em;color:#14254f}.ds-nav-logo b{color:var(--color-mark-blue,#1f5fd1);font-weight:inherit}.ds-nav-logo i{font-style:normal;font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.6rem;font-weight:600;letter-spacing:.05em;border:1px solid rgba(20,37,79,.4);border-radius:3px;padding:3px 4px;vertical-align:middle}.ds-nav-links{display:flex;gap:4px}.ds-nav-links a{padding:8px 12px;border-radius:9999px;font-size:.92rem;font-weight:500;color:#3d4a6b;text-decoration:none;transition:color 150ms}.ds-nav-links a:hover{color:#14254f}.ds-nav-links a:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}.ds-nav-cta{height:44px;display:inline-flex;align-items:center;padding:0 20px;border-radius:9999px;background:#14254f;color:#f4f6f3;font-weight:600;font-size:.95rem;text-decoration:none}.ds-nav-cta:hover{background:#1b2b55}.ds-nav-cta:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}"
-    },
-    {
-      "name": "Source Tag",
+      "name": "Provenance Tag",
       "kind": "chip",
       "refersTo": "source-tag",
-      "description": "Stamped provenance mark on every content item; dashed for demo content.",
-      "html": "<span class=\"ds-src\">Publicado en Instagram</span> <span class=\"ds-src ds-src-demo\">Contenido de ejemplo</span>",
-      "css": ".ds-src{display:inline-flex;align-items:center;gap:6px;padding:2px 6px;border:1px solid rgba(20,37,79,.3);border-radius:3px;color:#3d4a6b;font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.625rem;line-height:1;letter-spacing:.025em;text-transform:uppercase}.ds-src::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor}.ds-src-demo{border-style:dashed;border-color:rgba(93,104,132,.5);color:#5d6884}.ds-src-demo::before{opacity:.6}"
+      "description": "States where each content item comes from; example content is dashed.",
+      "html": "<span class=\"ds-tag\">De su Instagram</span> <span class=\"ds-tag ds-tag-demo\">Contenido de ejemplo</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 9999px; background: var(--color-mist-2, #e3edf4); color: var(--color-ink-2, #3c4b6b); font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; font-size: 0.72rem; line-height: 1; font-weight: 600; white-space: nowrap; } .ds-tag-demo { background: transparent; border: 1px dashed rgb(95 109 136 / 0.5); color: var(--color-ink-3, #5f6d88); }"
     },
     {
-      "name": "Register Row",
-      "kind": "custom",
-      "refersTo": null,
-      "description": "Fixed-column treatments register opened by a 2px ink rule.",
-      "html": "<div class=\"ds-reg\"><div class=\"ds-reg-head\"><span>Tratamiento</span><span>Qué resuelve</span><span>Citas</span></div><button class=\"ds-reg-row\"><span class=\"ds-reg-name\">Endodoncia</span><span class=\"ds-reg-txt\">Dolor intenso o nervio dañado</span><span class=\"ds-reg-data\">1 a 3 citas</span></button></div>",
-      "css": ".ds-reg{border-top:2px solid #14254f;font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;color:#14254f}.ds-reg-head,.ds-reg-row{display:grid;grid-template-columns:1.1fr 1.4fr 10rem;gap:24px;align-items:center;width:100%;text-align:left}.ds-reg-head{padding:12px 0;border-bottom:1px solid rgba(20,37,79,.25);font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.65rem;letter-spacing:.05em;text-transform:uppercase;color:#5d6884}.ds-reg-row{padding:20px 0;border:0;border-bottom:1px solid rgba(20,37,79,.15);background:none;color:inherit;font:inherit;cursor:pointer}.ds-reg-row:hover .ds-reg-name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em}.ds-reg-row:focus-visible{outline:2px solid var(--color-mark-blue,#1f5fd1);outline-offset:3px}.ds-reg-name{font-variation-settings:'wdth' 125;font-weight:700;font-size:1.4rem;letter-spacing:-.025em}.ds-reg-txt{color:#3d4a6b}.ds-reg-data{font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.78rem;font-variant-numeric:tabular-nums;color:#5d6884}"
-    },
-    {
-      "name": "Chart Panel",
+      "name": "Treatment Card",
       "kind": "card",
-      "refersTo": "chart-panel",
-      "description": "Ficha panel: printed header with notation legend over the 24px chart grid.",
-      "html": "<div class=\"ds-chart\"><div class=\"ds-chart-head\"><b>Ficha odontológica</b><span><i class=\"r\"></i>Por tratar <i class=\"b\"></i>Tratado</span></div><div class=\"ds-chart-grid\"><span class=\"ds-fdi\">Pieza 36</span></div></div>",
-      "css": ".ds-chart{border:1px solid rgba(20,37,79,.2);border-radius:14px;background:rgba(255,255,255,.7);overflow:hidden;font-family:'Archivo Variable','Archivo',ui-sans-serif,system-ui,sans-serif;color:#14254f}.ds-chart-head{display:flex;justify-content:space-between;align-items:flex-end;padding:12px 20px 10px;border-bottom:1px solid rgba(20,37,79,.2)}.ds-chart-head b{font-variation-settings:'wdth' 125;font-size:.95rem}.ds-chart-head span{display:flex;gap:6px;align-items:center;font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.6rem;color:#5d6884}.ds-chart-head i{width:10px;height:10px;border-radius:2px;display:inline-block}.ds-chart-head i.r{background:#d7263d}.ds-chart-head i.b{background:#1f5fd1;margin-left:8px}.ds-chart-grid{height:120px;padding:16px 20px;background-image:linear-gradient(to right,rgba(211,218,212,.6) 1px,transparent 1px),linear-gradient(to bottom,rgba(211,218,212,.6) 1px,transparent 1px);background-size:24px 24px}.ds-fdi{font-family:'Martian Mono Variable','Martian Mono',ui-monospace,monospace;font-size:.8rem;font-weight:600;font-variant-numeric:tabular-nums;color:#d7263d}"
+      "refersTo": "card",
+      "description": "White 20px card, soft at rest, card shadow on hover, ends with tag and Consultar link.",
+      "html": "<a class=\"ds-card\" href=\"#\"><div class=\"ds-card-photo\"><span class=\"ds-photo-note\">Foto referencial</span></div><div class=\"ds-card-body\"><h3>Endodoncia</h3><p>Salva el diente cuando el dolor llega al nervio.</p><div class=\"ds-card-foot\"><span class=\"ds-card-tag\">De su Instagram</span><span class=\"ds-card-link\">Consultar →</span></div></div></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; max-width: 320px; overflow: hidden; border: 1px solid var(--color-line, #d6e1ea); border-radius: 20px; background: #fff; color: var(--color-navy, #13264f); text-decoration: none; font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgb(19 38 79 / 0.05), 0 6px 18px -6px rgb(19 38 79 / 0.12); transition: box-shadow 200ms ease; } .ds-card:hover { box-shadow: 0 1px 2px rgb(19 38 79 / 0.06), 0 12px 32px -8px rgb(19 38 79 / 0.18); } .ds-card:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; } .ds-card-photo { position: relative; aspect-ratio: 16 / 9; background: var(--color-mist-2, #e3edf4); } .ds-photo-note { position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: 9999px; background: rgb(19 38 79 / 0.7); color: #fff; font-size: 0.72rem; font-weight: 600; backdrop-filter: blur(4px); } .ds-card-body { padding: 20px; } .ds-card-body h3 { margin: 0; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.08; } .ds-card-body p { margin: 6px 0 0; color: var(--color-ink-2, #3c4b6b); line-height: 1.6; } .ds-card-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-top: 16px; } .ds-card-tag { padding: 4px 10px; border-radius: 9999px; background: var(--color-mist-2, #e3edf4); color: var(--color-ink-2, #3c4b6b); font-size: 0.72rem; line-height: 1; font-weight: 600; } .ds-card-link { color: var(--color-celeste-deep, #0f7db3); font-size: 0.875rem; font-weight: 700; }"
+    },
+    {
+      "name": "Appointment Card",
+      "kind": "custom",
+      "refersTo": "appointment-card-header",
+      "description": "Signature ticket: navy header, option chips, dashed tear line with notches, celeste stub whose live summary becomes the WhatsApp message.",
+      "html": "<div class=\"ds-appt\"><div class=\"ds-appt-head\"><span>Tarjeta de citas</span><small>OdontoPlus VMT</small></div><div class=\"ds-appt-grid\"><div class=\"ds-appt-opts\"><p class=\"ds-appt-legend\">¿Qué necesitas?</p><div class=\"ds-appt-chips\"><span class=\"ds-appt-chip on\">Endodoncia</span><span class=\"ds-appt-chip\">Limpieza</span></div><p class=\"ds-appt-legend\">Turno</p><div class=\"ds-appt-chips\"><span class=\"ds-appt-chip\">Mañana</span><span class=\"ds-appt-chip on\">Tarde</span></div></div><div class=\"ds-appt-stub\"><span class=\"ds-notch\"></span><p class=\"ds-appt-sum\"><b>Tu cita:</b> Endodoncia · jueves · por la tarde</p><a class=\"ds-appt-btn\" href=\"#\">Reservar por WhatsApp</a></div></div></div>",
+      "css": ".ds-appt { position: relative; max-width: 640px; overflow: hidden; border: 1px solid var(--color-line, #d6e1ea); border-radius: 20px; background: #fff; color: var(--color-navy, #13264f); font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgb(19 38 79 / 0.06), 0 12px 32px -8px rgb(19 38 79 / 0.18); } .ds-appt-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: var(--color-navy, #13264f); color: #fff; } .ds-appt-head span { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.025em; } .ds-appt-head small { font-weight: 600; font-size: 0.875rem; color: rgb(255 255 255 / 0.8); } .ds-appt-grid { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; } .ds-appt-opts { padding: 20px; } .ds-appt-legend { margin: 0 0 8px; font-size: 0.875rem; font-weight: 700; color: var(--color-ink-2, #3c4b6b); } .ds-appt-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; } .ds-appt-chip { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; border: 2px solid var(--color-line, #d6e1ea); border-radius: 9999px; font-size: 0.9rem; font-weight: 600; color: var(--color-ink-2, #3c4b6b); } .ds-appt-chip.on { background: var(--color-navy, #13264f); border-color: var(--color-navy, #13264f); color: #fff; } .ds-appt-stub { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 24px 20px 20px; border-left: 2px dashed var(--color-line, #d6e1ea); background: rgb(223 241 250 / 0.55); } .ds-notch { position: absolute; left: -13px; bottom: -13px; width: 24px; height: 24px; border: 1px solid var(--color-line, #d6e1ea); border-radius: 9999px; background: #fff; } .ds-appt-sum { flex: 1; margin: 0; font-size: 1.125rem; font-weight: 700; line-height: 1.375; } .ds-appt-sum b { color: var(--color-celeste-deep, #0f7db3); } .ds-appt-btn { display: inline-flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: var(--color-whatsapp, #1c8f4e); color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 16px -6px rgb(28 143 78 / 0.55); transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease; } .ds-appt-btn:hover { background: var(--color-whatsapp-deep, #177a42); } .ds-appt-btn:active { transform: scale(0.97); } .ds-appt-btn:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky 72px header: logo, pill nav links, WhatsApp booking button.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\">Odonto<em>Plus</em></span><nav><a href=\"#\">Tratamientos</a><a href=\"#\">Casos</a><a href=\"#\">Opiniones</a></nav><a class=\"ds-nav-cta\" href=\"#\">Reservar cita</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; padding: 0 24px; background: var(--color-mist, #f1f6fa); font-family: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif; } .ds-nav-logo { font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--color-navy, #13264f); } .ds-nav-logo em { font-style: normal; color: var(--color-celeste, #1e9bd7); } .ds-nav nav { display: flex; gap: 4px; } .ds-nav nav a { padding: 8px 14px; border-radius: 9999px; font-weight: 600; font-size: 0.95rem; color: var(--color-ink-2, #3c4b6b); text-decoration: none; transition: background-color 150ms ease, color 150ms ease; } .ds-nav nav a:hover { background: rgb(19 38 79 / 0.05); color: var(--color-navy, #13264f); } .ds-nav nav a:focus-visible, .ds-nav-cta:focus-visible { outline: 2px solid var(--color-celeste, #1e9bd7); outline-offset: 3px; } .ds-nav-cta { display: inline-flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 9999px; background: var(--color-whatsapp, #1c8f4e); color: #fff; font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 16px -6px rgb(28 143 78 / 0.55); transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease; } .ds-nav-cta:hover { background: var(--color-whatsapp-deep, #177a42); } .ds-nav-cta:active { transform: scale(0.97); }"
     }
   ],
   "narrative": {
-    "northStar": "The Odontograma",
-    "overview": "Every surface is a page of the clinic's own dental chart. The ground is cool chart paper with a hairline printed grid, the ink is a deep navy that also carries whole sections as solid night bands, and colour beyond that is clinical notation: red marks what is *por tratar*, blue marks what is *tratado*, exactly as a dentist colours a chart by hand. Components are parts of a printed form (ruled registers with fixed columns, underline fields, stamped provenance tags, the five-surface tooth square) rather than generic web cards.\n\nDensity is calm and generous: large expanded-width headings, long ruled rows, and a single strong top rule (2px ink) that opens each register. Depth is flat: overlap, hairlines and tonal paper, never drop shadows. Motion behaves like a pen: marks are drawn on (pathLength), readings crossfade with a short blur, and every press gives a small, instant scale response. The world refuses the dental-category default of white-and-teal heroes, stock smiling patients and rounded service cards.\n\nContent is Spanish (Peru). Demo content is always labelled with its provenance; the system treats provenance as a visual element, not a footnote.",
+    "northStar": "Reserva a la vista",
+    "overview": "The system is a clean, bright neighbourhood-clinic world: white and cool-mist grounds, the clinic's navy carrying text and every full-width band, and a single celeste voice taken from the clinic's own Facebook cover. Its organising object is the clinic's paper appointment card (tarjeta de citas), rebuilt as an interactive ticket: options on the left, a perforated stub on the right whose summary fills in as the visitor chooses and becomes the WhatsApp message. Everything else on the page is calm and legible so that the card, and the green WhatsApp action inside it, are unmistakable.\n\nDensity is generous and friendly: big rounded photos of real dental care, pill buttons, soft navy-tinted shadows, Figtree at heavy weight for headings with tight tracking and relaxed body copy. The brand commitment from PRODUCT.md is binding here: clarity over concept. A visitor arriving from Instagram on a phone must read \"dentist in VMT, this is how I book\" in seconds; no device in this world may need explaining.\n\nHonesty is part of the visual language. Every content item carries a provenance tag (from Instagram, from Facebook, or example content), and stock photos that could be mistaken for the clinic carry a \"Foto referencial\" pill. The rejected previous world (abstract dental-chart notation) is a confirmed anti-reference.",
     "keyCharacteristics": [
-      "Cool chart paper ground, navy ink, navy night bands for whole sections.",
-      "Notation red and notation blue carry clinical meaning only.",
-      "Archivo on the width axis (expanded headings) paired with Martian Mono for numbers, labels and data.",
-      "Printed-form components: ruled rows, fixed columns, underline fields, stamped tags.",
-      "Flat depth; pen-like motion with reduced-motion fallbacks."
+      "White and mist grounds, navy text and bands, one celeste accent, WhatsApp green reserved for WhatsApp.",
+      "Figtree Variable throughout; 800 for headings, tight negative tracking.",
+      "Pills for every action and chip; 20px cards; 28px photos and bands.",
+      "The appointment card is the one object elevated at rest.",
+      "Provenance tags and \"Foto referencial\" pills are permanent parts of the system, not afterthoughts.",
+      "Motion is quick, ease-out, small in distance, and has a reduced-motion fallback everywhere."
     ],
     "rules": [
-      {
-        "name": "The Notation Rule",
-        "body": "Red and blue are clinical marks: red means *por tratar*, blue means *tratado*. Use them only on teeth, chart legends, before/after states, case annotations, the H1 key phrase and the footer red/blue line (plus the system focus ring, selection and caret the build assigns them). Never as decorative fills, section backgrounds, icons or generic accents.",
-        "section": "colors"
-      },
-      {
-        "name": "The Ink Carries Sections Rule",
-        "body": "Navy is not only text: whole sections switch to the night band to change pace. Alternate paper, paper-shade and night bands; do not invent new section colours.",
-        "section": "colors"
-      },
-      {
-        "name": "The Width Axis Rule",
-        "body": "Hierarchy comes from width and weight on one family, not from a second display face. Headings expand (wdth 112–125); body never does.",
-        "section": "typography"
-      },
-      {
-        "name": "The Mono Is Data Rule",
-        "body": "Martian Mono sets numbers, field labels and data. It labels a field, a column or a value; it never floats above a section heading as a decorative tagline.",
-        "section": "typography"
-      },
-      {
-        "name": "The Chart Paper Rule",
-        "body": "The 24px printed grid appears only on chart surfaces (the hero odontogram and case charts), never as a page or section background.",
-        "section": "layout"
-      },
-      {
-        "name": "The Flat Overlap Rule",
-        "body": "Depth is shown by overlap, borders and tone, never by drop shadows or glows.",
-        "section": "elevation"
-      }
+      { "name": "The One Voice Rule", "body": "Celeste is the only accent. It marks one or two words per heading, icons and links; it never fills a band, a button or a card.", "section": "colors" },
+      { "name": "The Green Means WhatsApp Rule", "body": "WhatsApp green appears only on elements that open WhatsApp. A green button that does anything else breaks the booking signal.", "section": "colors" },
+      { "name": "The Navy Band Rule", "body": "Full-width dark surfaces (appointment-card header, CTA band, footer) are navy, never celeste or green.", "section": "colors" },
+      { "name": "The Heavy Heading Rule", "body": "Every heading is Figtree 800 with negative tracking and balanced wrapping. Weight carries hierarchy; no second display face.", "section": "typography" },
+      { "name": "The Plain Label Rule", "body": "Labels are sentence case questions in plain Spanish (\"¿Qué necesitas?\", \"¿Qué día te acomoda?\"). Letter-spaced uppercase belongs only to the logo's \"VMT · CLÍNICA DENTAL\" lockup line.", "section": "typography" },
+      { "name": "The One Elevated Object Rule", "body": "Only the appointment card wears the card shadow at rest. Every other card is soft at rest and may rise to card on hover.", "section": "elevation" },
+      { "name": "The Tinted Shadow Rule", "body": "Shadows are tinted with navy (or green on WhatsApp actions), never neutral black.", "section": "elevation" }
     ],
     "dos": [
-      "Do mark clinical state with Notation Red (*por tratar*) and Notation Blue (*tratado*), and keep that meaning consistent across chart, legend, cases and copy.",
-      "Do set headings in Archivo at wdth 112 (titles at 125) and body at wdth 100.",
-      "Do put FDI numbers, field labels, visit counts, hours and phone numbers in Martian Mono with tabular numerals.",
-      "Do open every register with a 2px ink top rule and divide rows with 1px ink hairlines at 15%.",
-      "Do label every content item with a Source Tag; dashed for \"Contenido de ejemplo\".",
-      "Do use the night band for whole sections, with white type and white-at-15% hairlines.",
-      "Do give every pressable the 0.97 press scale and provide a reduced-motion fallback for every animation.",
-      "Do route every booking action through the WhatsApp green button."
+      "Do keep navy (#13264F) as the text and band color and celeste as the only accent, used on one or two words per heading.",
+      "Do use base celeste only at large or bold sizes; use celeste-deep for small text and links.",
+      "Do put WhatsApp green on every action that opens WhatsApp, and on nothing else.",
+      "Do give every content item a provenance tag, and every stock photo that could pass as the clinic a \"Foto referencial\" pill.",
+      "Do use pills for actions and chips, 20px for cards, 28px for photos and bands.",
+      "Do keep the appointment card as the only object with the card shadow at rest.",
+      "Do use ease-out cubic-bezier(0.23, 1, 0.32, 1), short distances (≤14px), press scale 0.97, and a reduced-motion fallback for every animation.",
+      "Do write labels and headings in plain Peru Spanish, sentence case."
     ],
     "donts": [
-      "Don't use red or blue as decoration, section backgrounds, or generic accent colour.",
-      "Don't add drop shadows or glows; depth is flat overlap and tone.",
-      "Don't put the chart grid on page or section backgrounds; it belongs to chart surfaces only.",
-      "Don't place mono uppercase taglines above section headings; mono labels name fields, columns and values.",
-      "Don't fall back to white-and-teal heroes, stock smiling patients, or rounded service-card grids.",
-      "Don't box form fields; fields are underlines.",
-      "Don't present demo content (team, testimonials, hours, prices) without its \"Contenido de ejemplo\" tag."
+      "Don't introduce a second accent color or fill large areas with celeste.",
+      "Don't use green for non-WhatsApp actions.",
+      "Don't use neutral black shadows or hard offset shadows; shadows are soft and navy-tinted.",
+      "Don't add small uppercase letter-spaced kickers or eyebrows above headings.",
+      "Don't bring back abstract chart notation, technical diagrams or any device that needs explaining (the rejected odontogram world).",
+      "Don't add a second typeface; Figtree carries display and text."
     ]
   }
 }

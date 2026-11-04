@@ -2,7 +2,9 @@ import { Phone } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { AppointmentCard } from '../components/booking/AppointmentCard'
 import { Logo, Logomark } from '../components/brand/Logo'
+import { photos } from '../shared/lib/photos'
 import { Button } from '../shared/ui/Button'
+import { PhotoNote } from '../shared/ui/PhotoNote'
 import { SourceTag } from '../shared/ui/SourceTag'
 import { WhatsappIcon } from '../shared/ui/icons'
 
@@ -110,11 +112,10 @@ export function BrandSheet() {
               </div>
             </div>
             <div>
-              <p className="mb-3 text-sm font-bold text-ink-3">Portada de caso (como en su Instagram)</p>
-              <div className="flex aspect-[4/5] w-64 flex-col items-center justify-center rounded-[var(--radius-card)] bg-navy px-4 text-center text-white">
-                <span className="text-[0.82rem] font-bold tracking-wide uppercase">Renovación de</span>
-                <span className="mt-1 text-[2.1rem] leading-none font-[900] uppercase">Resinas</span>
-                <span className="mt-2.5 rounded-md bg-celeste px-2.5 py-1 text-[0.72rem] font-bold uppercase">antiguas</span>
+              <p className="mb-3 text-sm font-bold text-ink-3">Foto de stock (hasta tener las de la clínica)</p>
+              <div className="relative aspect-[4/3] w-72 overflow-hidden rounded-[var(--radius-photo)] bg-mist-2">
+                <img src={photos.consultorio.src} alt={photos.consultorio.alt} className="absolute inset-0 size-full object-cover" />
+                <PhotoNote />
               </div>
             </div>
           </div>

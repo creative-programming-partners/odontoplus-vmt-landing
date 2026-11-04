@@ -1,266 +1,277 @@
 ---
 name: OdontoPlus VMT
-description: Clínica dental para toda la familia en Villa María del Triunfo, presented as the clinic's own dental chart (odontograma).
+description: Clínica dental para toda la familia en Villa María del Triunfo; booking in plain sight through the clinic's appointment card.
 colors:
-  paper: "#f4f6f3"
-  paper-2: "#e9ede8"
-  rule: "#d3dad4"
-  rule-strong: "#b4beb7"
-  ink: "#14254f"
-  ink-2: "#3d4a6b"
-  ink-3: "#5d6884"
-  night: "#0f1c3d"
-  night-2: "#1b2b55"
-  mark-red: "#d7263d"
-  mark-red-soft: "#f7d9dd"
-  mark-blue: "#1f5fd1"
-  mark-blue-soft: "#d9e4f8"
+  white: "#ffffff"
+  mist: "#f1f6fa"
+  mist-2: "#e3edf4"
+  line: "#d6e1ea"
+  navy: "#13264f"
+  navy-2: "#1c3466"
+  ink-2: "#3c4b6b"
+  ink-3: "#5f6d88"
+  celeste: "#1e9bd7"
+  celeste-deep: "#0f7db3"
+  celeste-soft: "#dff1fa"
   whatsapp: "#1c8f4e"
+  whatsapp-deep: "#177a42"
 typography:
   display:
-    fontFamily: "'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.35rem, 4.6vw, 4.6rem)"
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.3rem, 4.2vw, 3.4rem)"
     fontWeight: 800
-    lineHeight: 1.04
+    lineHeight: 1.08
     letterSpacing: "-0.035em"
-    fontVariation: "'wdth' 112"
   headline:
-    fontFamily: "'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 4.4vw, 3.5rem)"
-    fontWeight: 750
-    lineHeight: 1.04
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.9rem, 4vw, 3rem)"
+    fontWeight: 800
+    lineHeight: 1.08
     letterSpacing: "-0.025em"
-    fontVariation: "'wdth' 112"
   title:
-    fontFamily: "'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1.4rem"
-    fontWeight: 700
-    lineHeight: 1.15
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 800
+    lineHeight: 1.08
     letterSpacing: "-0.025em"
-    fontVariation: "'wdth' 125"
   body:
-    fontFamily: "'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
-    fontVariation: "'wdth' 100"
   label:
-    fontFamily: "'Martian Mono Variable', 'Martian Mono', ui-monospace, monospace"
-    fontSize: "0.68rem"
-    fontWeight: 400
-    letterSpacing: "0.05em"
-  data:
-    fontFamily: "'Martian Mono Variable', 'Martian Mono', ui-monospace, monospace"
-    fontSize: "0.78rem"
-    fontWeight: 400
-    fontFeature: "'tnum'"
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 700
+    lineHeight: 1.25
+  tag:
+    fontFamily: "'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.72rem"
+    fontWeight: 600
+    lineHeight: 1
 rounded:
-  tag: "3px"
-  check: "4px"
-  panel: "14px"
+  focus: "6px"
+  tile: "16px"
+  card: "20px"
+  photo: "28px"
   pill: "9999px"
 spacing:
-  gutter-mobile: "16px"
-  gutter-tablet: "24px"
-  gutter-desktop: "40px"
-  section: "80px"
-  section-md: "112px"
-  container: "1320px"
+  gutter-sm: "16px"
+  gutter-md: "24px"
+  gutter-lg: "40px"
+  card-pad: "20px"
+  section-y: "80px"
+  section-y-md: "112px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.white}"
     rounded: "{rounded.pill}"
     padding: "0 20px"
     height: "44px"
   button-primary-hover:
-    backgroundColor: "{colors.night-2}"
+    backgroundColor: "{colors.navy-2}"
   button-whatsapp:
     backgroundColor: "{colors.whatsapp}"
-    textColor: "#ffffff"
+    textColor: "{colors.white}"
     rounded: "{rounded.pill}"
     padding: "0 28px"
     height: "56px"
+  button-whatsapp-hover:
+    backgroundColor: "{colors.whatsapp-deep}"
   button-outline:
-    textColor: "{colors.ink}"
+    backgroundColor: "transparent"
+    textColor: "{colors.navy}"
     rounded: "{rounded.pill}"
     padding: "0 20px"
     height: "44px"
-  chip-symptom:
+  button-white:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.navy}"
+    rounded: "{rounded.pill}"
+    padding: "0 20px"
+    height: "44px"
+  button-white-hover:
+    backgroundColor: "{colors.mist}"
+  chip-option:
+    backgroundColor: "{colors.white}"
     textColor: "{colors.ink-2}"
     rounded: "{rounded.pill}"
-    padding: "0 12px"
+    padding: "0 14px"
     height: "40px"
-  chip-symptom-active:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
+  chip-option-selected:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.white}"
   source-tag:
+    backgroundColor: "{colors.mist-2}"
     textColor: "{colors.ink-2}"
-    typography: "{typography.label}"
-    rounded: "{rounded.tag}"
-    padding: "2px 6px"
-  chart-panel:
-    rounded: "{rounded.panel}"
-  field-underline:
-    textColor: "#ffffff"
-    height: "48px"
-    padding: "0"
+    typography: "{typography.tag}"
+    rounded: "{rounded.pill}"
+    padding: "4px 10px"
+  card:
+    backgroundColor: "{colors.white}"
+    rounded: "{rounded.card}"
+    padding: "20px"
+  appointment-card-header:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.white}"
+    padding: "14px 20px"
+  appointment-card-stub:
+    backgroundColor: "{colors.celeste-soft}"
+    textColor: "{colors.navy}"
+    padding: "20px"
 ---
 
 # Design System: OdontoPlus VMT
 
 ## Overview
 
-**Creative North Star: "The Odontograma"**
+**Creative North Star: "Reserva a la vista"**
 
-Every surface is a page of the clinic's own dental chart. The ground is cool chart paper with a hairline printed grid, the ink is a deep navy that also carries whole sections as solid night bands, and colour beyond that is clinical notation: red marks what is *por tratar*, blue marks what is *tratado*, exactly as a dentist colours a chart by hand. Components are parts of a printed form (ruled registers with fixed columns, underline fields, stamped provenance tags, the five-surface tooth square) rather than generic web cards.
+The system is a clean, bright neighbourhood-clinic world: white and cool-mist grounds, the clinic's navy carrying text and every full-width band, and a single celeste voice taken from the clinic's own Facebook cover. Its organising object is the clinic's paper appointment card (tarjeta de citas), rebuilt as an interactive ticket: options on the left, a perforated stub on the right whose summary fills in as the visitor chooses and becomes the WhatsApp message. Everything else on the page is calm and legible so that the card, and the green WhatsApp action inside it, are unmistakable.
 
-Density is calm and generous: large expanded-width headings, long ruled rows, and a single strong top rule (2px ink) that opens each register. Depth is flat: overlap, hairlines and tonal paper, never drop shadows. Motion behaves like a pen: marks are drawn on (pathLength), readings crossfade with a short blur, and every press gives a small, instant scale response. The world refuses the dental-category default of white-and-teal heroes, stock smiling patients and rounded service cards.
+Density is generous and friendly: big rounded photos of real dental care, pill buttons, soft navy-tinted shadows, Figtree at heavy weight for headings with tight tracking and relaxed body copy. The brand commitment from PRODUCT.md is binding here: clarity over concept. A visitor arriving from Instagram on a phone must read "dentist in VMT, this is how I book" in seconds; no device in this world may need explaining.
 
-Content is Spanish (Peru). Demo content is always labelled with its provenance; the system treats provenance as a visual element, not a footnote.
+Honesty is part of the visual language. Every content item carries a provenance tag (from Instagram, from Facebook, or example content), and stock photos that could be mistaken for the clinic carry a "Foto referencial" pill. The rejected previous world (abstract dental-chart notation) is a confirmed anti-reference.
 
 **Key Characteristics:**
-- Cool chart paper ground, navy ink, navy night bands for whole sections.
-- Notation red and notation blue carry clinical meaning only.
-- Archivo on the width axis (expanded headings) paired with Martian Mono for numbers, labels and data.
-- Printed-form components: ruled rows, fixed columns, underline fields, stamped tags.
-- Flat depth; pen-like motion with reduced-motion fallbacks.
+- White and mist grounds, navy text and bands, one celeste accent, WhatsApp green reserved for WhatsApp.
+- Figtree Variable throughout; 800 for headings, tight negative tracking.
+- Pills for every action and chip; 20px cards; 28px photos and bands.
+- The appointment card is the one object elevated at rest.
+- Provenance tags and "Foto referencial" pills are permanent parts of the system, not afterthoughts.
+- Motion is quick, ease-out, small in distance, and has a reduced-motion fallback everywhere.
 
 ## Colors
 
-A cool, near-monochrome paper-and-navy chart where the only saturated colour is clinical notation (plus WhatsApp green for the booking action).
+A cool, clinical-but-warm palette: mostly white and mist, anchored by navy, with one bright celeste accent and one functional green.
 
 ### Primary
-- **Chart Ink Navy** (#14254f): body text, headings, rules, strokes of every tooth and logomark, primary button fill, active chip fill. The heritage navy of the clinic, kept as the ink of the chart.
-- **Night Band** (#0f1c3d): solid background for whole sections (Primera cita, Reservar, footer). White type sits on it; it is a section ground, never a card fill on paper.
-- **Night Raised** (#1b2b55): hover state of the primary button.
+- **OdontoPlus Navy** (navy): body and heading text, the logo tooth, primary buttons, selected chips, the appointment-card header, the CTA band and the footer. The brand's anchor; when in doubt, text is navy.
+- **Navy Hover** (navy-2): hover state of navy primary buttons only.
 
 ### Secondary
-- **Notation Red** (#d7263d): the *por tratar* mark. Tooth surfaces, the pen ring on a selected tooth, the "Antes" toggle, the hand-drawn underline under the H1 key phrase, case brackets and leader lines in the before phase, the red half of the footer line, and the form caret.
-- **Notation Red Wash** (#f7d9dd): crown tint of a tooth marked red.
+- **Cover Celeste** (celeste): the single accent. Emphasis words inside large headings (the hero's "de confianza"), the "Plus" of the logo and its badge, header icons, focus rings, text selection and caret. Used at large or bold sizes only.
+- **Deep Celeste** (celeste-deep): the accent at text size: "Consultar" links, "Tu cita:" on the stub, icons inside soft celeste discs. Use this, never base celeste, for small text.
+- **Celeste Wash** (celeste-soft): icon discs in the trust row and the appointment-card stub (at about 55% opacity).
 
 ### Tertiary
-- **Notation Blue** (#1f5fd1): the *tratado* mark. Tooth surfaces after treatment, the "Después" toggle, completed case steps, the H1 key phrase "diente por diente", the plus at the centre of the logomark and the "plus" in the wordmark. Also the system focus ring and text selection.
-- **Notation Blue Wash** (#d9e4f8): crown tint of a tooth marked blue.
-- **WhatsApp Green** (#1c8f4e): WhatsApp actions only (booking buttons, "Preguntar precio" links). It is the action colour, never a brand accent.
+- **WhatsApp Green** (whatsapp) and **WhatsApp Hover** (whatsapp-deep): only on actions that open WhatsApp: the stub's "Reservar por WhatsApp", the header "Reservar cita", the floating bubble, the CTA band's main button, and inline WhatsApp links.
 
 ### Neutral
-- **Chart Paper** (#f4f6f3): page ground and paper-tone button fill.
-- **Paper Shade** (#e9ede8): alternate section ground (used at 60% for Casos, Opiniones, Ubicación) to separate bands without a shadow.
-- **Hairline Rule** (#d3dad4): the printed chart grid (at 60% mix) and soft rules.
-- **Strong Rule** (#b4beb7): scrollbar thumb and heavier dividers.
-- **Ink Secondary** (#3d4a6b): intros, secondary copy, inactive chip text.
-- **Ink Tertiary** (#5d6884): mono labels, FDI numbers not in focus, captions, meta.
+- **White** (white): default page ground, cards, unselected chips.
+- **Cool Mist** (mist): hero gradient start, header at rest, alternating section grounds (cases), white-button hover.
+- **Deep Mist** (mist-2): photo placeholders, factual provenance tags, pending-photo slots.
+- **Hairline** (line): 1px card borders, 2px chip borders, the dashed tear line, dividers, scrollbar thumb.
+- **Slate** (ink-2): secondary text, intros, chip labels, legends.
+- **Muted Slate** (ink-3): tertiary text, meta lines, empty-state stub copy, demo-tag text.
 
 ### Named Rules
-**The Notation Rule.** Red and blue are clinical marks: red means *por tratar*, blue means *tratado*. Use them only on teeth, chart legends, before/after states, case annotations, the H1 key phrase and the footer red/blue line (plus the system focus ring, selection and caret the build assigns them). Never as decorative fills, section backgrounds, icons or generic accents.
+**The One Voice Rule.** Celeste is the only accent. It marks one or two words per heading, icons and links; it never fills a band, a button or a card.
 
-**The Ink Carries Sections Rule.** Navy is not only text: whole sections switch to the night band to change pace. Alternate paper, paper-shade and night bands; do not invent new section colours.
+**The Green Means WhatsApp Rule.** WhatsApp green appears only on elements that open WhatsApp. A green button that does anything else breaks the booking signal.
+
+**The Navy Band Rule.** Full-width dark surfaces (appointment-card header, CTA band, footer) are navy, never celeste or green.
 
 ## Typography
 
-**Display Font:** Archivo Variable (with Archivo, ui-sans-serif, system-ui)
-**Label/Mono Font:** Martian Mono Variable (with ui-monospace)
+**Display Font:** Figtree Variable (with Figtree, ui-sans-serif, system-ui)
+**Body Font:** Figtree Variable (same stack)
 
-**Character:** Archivo's width axis is the voice: headings set expanded (wdth 112, titles and the wordmark at 125) read like the printed header of a clinical form, while body stays at wdth 100. Martian Mono is the chart's handwriting of record: FDI tooth numbers, field labels, visit counts, hours, phone numbers.
+**Character:** One friendly geometric sans at two temperatures: 800-weight headings with tight tracking that read as confident and local, and 400–600 body that stays plain and easy on a phone.
 
 ### Hierarchy
-- **Display** (800, clamp(2.35rem, 4.6vw, 4.6rem), 1.04, -0.035em, wdth 112): the hero H1 and the footer statement only.
-- **Headline** (750, clamp(2rem, 4.4vw, 3.5rem), 1.04, -0.025em, wdth 112): section H2s, balanced wrap.
-- **Title** (700, 1.25–1.45rem, tight, wdth 125): register row names, step titles, panel headers ("Ficha odontológica"), the address.
-- **Body** (400, 1.0625rem, 1.6, wdth 100): copy, pretty wrap, measures of 46–62ch; intros at 1.125rem in Ink Secondary.
-- **Label** (Martian Mono 400, 0.6–0.68rem, 0.05em tracking, uppercase): field labels, column headers, list legends (Dirección, Horario, Turno, Contacto).
-- **Data** (Martian Mono, 0.55–0.8rem, tabular numerals): FDI numbers, "Pieza 36", visits, hours, phone, "Paso 1 / 4".
+- **Display** (800, clamp(2.3rem, 4.2vw, 3.4rem), 1.08, -0.035em): the hero H1 only.
+- **Headline** (800, clamp(1.9rem, 4vw, 3rem), 1.08, -0.025em): section H2s and the CTA band, with an optional intro paragraph at 1.125rem in slate, max 58ch.
+- **Title** (800, 1.125–1.6rem, 1.08): card and treatment names; featured treatment names run at 1.6rem, compact ones at 1.25rem.
+- **Body** (400, 1.0625rem, 1.6): running text, `text-wrap: pretty`, measure 48–62ch.
+- **Label** (700, 0.875rem): chip-group legends, trust-row titles, stub links; chips themselves are 600 at 0.9rem.
+- **Tag** (600, 0.72rem, line-height 1): provenance tags and "Foto referencial" pills.
 
 ### Named Rules
-**The Width Axis Rule.** Hierarchy comes from width and weight on one family, not from a second display face. Headings expand (wdth 112–125); body never does.
+**The Heavy Heading Rule.** Every heading is Figtree 800 with negative tracking and balanced wrapping. Weight carries hierarchy; no second display face.
 
-**The Mono Is Data Rule.** Martian Mono sets numbers, field labels and data. It labels a field, a column or a value; it never floats above a section heading as a decorative tagline.
+**The Plain Label Rule.** Labels are sentence case questions in plain Spanish ("¿Qué necesitas?", "¿Qué día te acomoda?"). Letter-spaced uppercase belongs only to the logo's "VMT · CLÍNICA DENTAL" lockup line.
 
 ## Layout
 
-A 12-column grid inside a centred container (max 1320px) with gutters of 16px, 24px and 40px at mobile, sm and lg. Sections breathe on an 80px rhythm (112px from md). Heroes and section intros take 5–7 columns; the working chart takes the other 7. Registers (treatments, FAQ, team, case list) span the full content width and open with a 2px ink top rule, rows divided by ink hairlines at 15%. Mobile-first: the odontogram stacks into four quadrant rows on phones and becomes the classic 2×2 chart with midlines from md; a fixed WhatsApp booking bar appears below md. Breakpoints are Tailwind defaults (640 / 768 / 1024 / 1280).
+A centred container (max 1320px) with 16 / 24 / 40px side gutters at phone / sm / lg. Desktop sections use a 12-column grid: the hero gives 7 columns to the H1, promise and appointment card and 5 to a tall rounded photo with a trust row beneath; the FAQ splits 4 / 8. Sections breathe at 80px vertical padding, 112px from md up, alternating white and mist grounds. Card grids use 20px gaps (2 featured treatments, then 4 compact). Horizontal content (cases) becomes a snap-scrolling rail with hidden scrollbar on phones and a 5-column grid on desktop.
 
-**The Chart Paper Rule.** The 24px printed grid appears only on chart surfaces (the hero odontogram and case charts), never as a page or section background.
+On phones the order is H1, promise, a full-width WhatsApp button, the photo, then the appointment card stacked (stub below the options). The ticket layout (stub beside options, 17rem wide) appears from lg. The booking button must stay in the first viewport at 1280×720. Sticky header is 72px; anchor scroll offset is 5.5rem.
 
 ## Elevation & Depth
 
-The system is flat. There is no box-shadow anywhere in the build. Depth comes from flat overlap and tone: chart panels are translucent white (70–80%) over paper with a 1px ink border at 20%; tiled grids use a 1px gap over a tinted ground so the hairlines are the background showing through; sections separate by paper / paper-shade / night bands. The sticky header and mobile booking bar use 95% paper with a small backdrop blur purely for legibility while scrolling.
+A light, layered system: surfaces are white on mist, separated mainly by hairline borders, with two navy-tinted shadows. Depth signals importance and interactivity, never decoration.
 
-**The Flat Overlap Rule.** Depth is shown by overlap, borders and tone, never by drop shadows or glows.
+### Shadow Vocabulary
+- **Soft** (`box-shadow: 0 1px 2px rgb(19 38 79 / 0.05), 0 6px 18px -6px rgb(19 38 79 / 0.12)`): resting state of trust tiles, treatment and case cards, the menu button and the rating badge.
+- **Card** (`box-shadow: 0 1px 2px rgb(19 38 79 / 0.06), 0 12px 32px -8px rgb(19 38 79 / 0.18)`): the appointment card at rest; elsewhere only as the hover state of a soft card.
+- **WhatsApp glow** (`0 6px 16px -6px rgb(28 143 78 / 0.55)` on buttons, `0 10px 28px -8px rgb(28 143 78 / 0.6)` on the floating bubble): a green-tinted lift unique to WhatsApp actions.
+
+### Named Rules
+**The One Elevated Object Rule.** Only the appointment card wears the card shadow at rest. Every other card is soft at rest and may rise to card on hover.
+
+**The Tinted Shadow Rule.** Shadows are tinted with navy (or green on WhatsApp actions), never neutral black.
 
 ## Shapes
 
-Mostly square-shouldered printed forms with two soft exceptions. Stamped tags, legend swatches and the case-list marker use a barely rounded 3px corner; step checkboxes 4px. Chart panels, tiled step grids, testimonials and the map frame use a 14px panel radius. Every interactive control (buttons, chips, toggles, icon buttons, the register's open/close disc) is a full pill or circle. Rules are the main structural shape: 2px ink to open a register, 1px hairlines to divide rows, 2px underlines as the only field border. The logomark is the five-surface tooth square with a 9px-radius frame, corner diagonals and a plus at its centre.
+Generously rounded and friendly. Cards, FAQ items and the appointment card use 20px; photos and the navy CTA band use 28px; trust tiles 16px; every button, chip, nav link, tag and icon disc is a full pill or circle. Borders are 1px hairline on cards and 2px on chips and outline buttons. The one non-rounded geometry is the ticket: a 2px dashed tear line between options and stub, with 24px circular perforation notches clipped to half circles where the line meets the card edge. Dashed borders also mark anything provisional (example-content tags, pending case photos).
 
 ## Components
 
 ### Buttons
-Confident, rounded, instant.
-- **Shape:** full pill (9999px); heights 44px (md) and 56px (lg).
-- **Primary:** ink fill with paper text, semibold 0.95rem, hover to Night Raised. Used for "Reservar cita" in the header.
-- **WhatsApp:** green fill, white text, WhatsApp glyph at 18–20px; the default for every booking action, full-width on mobile.
-- **Outline:** 1px ink border at 25%, hover to full ink with a 4% ink wash. Secondary actions like "Ver tratado / Ver antes".
-- **Paper / Ghost:** paper fill or transparent, for use on night bands and quiet actions.
-- **Press:** every pressable scales to 0.97 on active (160ms, strong ease-out); colours change over 180ms. Reduced motion removes the scale.
+Tactile, confident pills.
+- **Shape:** full pill; heights 44px (md, 20px side padding, 0.95rem) and 56px (lg, 28px, 1.02rem); weight 700; icon gap 10px.
+- **Primary:** navy fill, white text; hover navy-2.
+- **WhatsApp:** green fill, white text, WhatsApp glyph (inline brand SVG) left, green glow; hover whatsapp-deep. The default booking action.
+- **Outline:** 2px navy-at-15% border, navy text; border darkens to 40% on hover.
+- **White / Ghost-light:** white fill on dark grounds; or 2px white-at-30% border, white text, on the navy band.
+- **Press / Focus:** scale 0.97 on press (160ms, ease-out-strong), colors 180ms; 2px celeste focus outline at 3px offset. Reduced motion removes the scale.
 
 ### Chips
-- **Style:** pill, 40–44px tall, 1px ink border at 20%, Ink Secondary text, 0.8rem medium.
-- **State:** active fills with ink and paper text (on night bands: white fill, ink text). Symptom chips are a radio group; day/shift chips are toggle buttons.
+- **Style:** 40px pill, 2px hairline border, white fill, slate text, 600 at 0.9rem; compact chips (days, shifts) are at least 48px wide.
+- **State:** selected chips fill navy with white text (`aria-pressed`); tapping again clears the choice. Hover darkens the border only on hover-capable devices.
 
 ### Cards / Containers
-- **Corner Style:** 14px panel radius.
-- **Background:** white at 70–80% over paper; night on night bands.
-- **Shadow Strategy:** none (see Elevation & Depth).
-- **Border:** 1px ink at 20% (white at 15% on night).
-- **Internal Padding:** 12–28px; panels are subdivided by ink rules into printed header, body and reading strips.
-
-### Inputs / Fields
-- **Style:** underline fields: no box, transparent ground, 2px bottom rule (white at 30% on night), 48px tall, 1.125rem text, mono uppercase label above.
-- **Focus:** the underline goes to full white; caret is Notation Red.
-- **Error:** underline and message turn to a light red tuned for the night band.
+- **Corner Style:** 20px.
+- **Background:** white, on white or mist sections.
+- **Shadow Strategy:** soft at rest, card on hover (see Elevation).
+- **Border:** 1px hairline.
+- **Internal Padding:** 20px, 24–28px on featured cards. Photos inside cards zoom to 1.03 over 500ms on hover.
+- Each content card ends with a provenance tag on the left and a deep-celeste "Consultar →" link on the right.
 
 ### Navigation
-Chart-header bar, 68px, sticky. Paper ground that gains a 15% ink bottom rule and 95% translucency after scroll. Links 0.92rem medium Ink Secondary, hover to ink. Below lg the menu becomes a full-height paper sheet of large expanded links divided by hairlines, with a full-width WhatsApp button at the foot.
+Sticky 72px header: mist at rest, white at 95% with a hairline bottom shadow and backdrop blur once scrolled. Links are 600 at 0.95rem in slate, as pills that gain a 5% navy wash on hover. Right side: phone with celeste icon (xl), the WhatsApp "Reservar cita" button, and on mobile a white circular menu button opening a full-height white sheet with 800-weight 1.5rem links and stacked WhatsApp and call buttons.
 
-### Source Tag
-The stamped provenance mark on every content item: Martian Mono 0.625rem uppercase in a 3px-radius 1px box with a leading dot. Real sources ("Publicado en Instagram", "Dato de Facebook") take a solid border; "Contenido de ejemplo" takes a dashed border and dimmer ink so demo content is never read as real.
+### Appointment Card (signature)
+The clinic's paper tarjeta de citas as a ticket. A navy header strip ("Tarjeta de citas" plus white logomark and name), three chip groups (treatment, day, shift), and a celeste-washed stub behind a dashed tear line with perforation notches. The stub's summary ("Tu cita: Endodoncia · jueves · por la tarde") updates live with a 220ms blur crossfade (blur 3px, 4px rise) and is announced politely to screen readers; the full-width WhatsApp button sends exactly that summary. Nothing is required; there is no name field. Below the button, a quiet underlined phone link.
 
-### Register Row
-The treatments table and FAQ: fixed columns (treatment / qué resuelve / citas / open disc) that never shift, a mono column header, row titles in Title style, data in mono. Rows open by animating grid-template-rows (300ms, strong ease-out) and the circular plus turns 45° into an ink-filled close.
+### Provenance Tag and Photo Note
+- **Provenance tag:** pill, 0.72rem 600. Factual sources (Instagram, Facebook) on deep-mist fill with slate text; example content in a dashed muted-slate border with no fill. Dark variants on navy use white at 10% fill or dashed white at 40%.
+- **Foto referencial:** pill pinned 12px from the photo's bottom-left, navy at 70% with backdrop blur, white 0.72rem 600 text. Required on any stock photo that could be read as the clinic itself; removed when a real clinic photo replaces it.
 
-### Tooth Glyph and Odontogram
-Each tooth is a silhouette (incisor, canine, premolar, molar; lower teeth mirrored) above or below the five-surface square, stroked in ink at ~1.1–1.3px. A mark fills the occlusal centre and one side in red or blue and washes the crown; the selected tooth gets a pen ring drawn on with pathLength. FDI numbers sit in mono beside each tooth; quadrant midlines are ink at 35%.
-
-### Case Annotation
-A segment of the arch with a 2px bracket under the treated teeth and a leader line that draws down (scaleY) to a mono caption, all in the current notation colour. Before/after is a mono pill toggle (red "Antes", blue "Después"); case steps check off in blue with a 90ms stagger.
-
-### Logo
-The five-surface tooth square with its centre turned into a blue plus, beside the expanded wordmark "Odonto**plus**" (plus in Notation Blue) and a mono "VMT" stamp. Ink and paper tones.
+### Floating WhatsApp
+Appears after 720px of scroll (once the hero card is out of view) at bottom-right, respecting safe-area insets: a 56px green pill with glyph and "Escríbenos" (label hidden on phones), green glow. Enters with a spring (0.45s, bounce 0.2) from 12px below at scale 0.9; exits in 150ms.
 
 ### Motion
-- **Easing:** strong ease-out (cubic-bezier(0.23, 1, 0.32, 1)) for entrances and state changes; strong ease-in-out (cubic-bezier(0.77, 0, 0.175, 1)) for pen draws (underline, ring, leader line).
-- **Reveal:** scroll entrances move 14px with opacity over 0.6s, once.
-- **Crossfade:** chart readings and case panels swap with a 4–6px blur and opacity over 0.28–0.3s.
-- **Reduced motion:** transforms, blur and draws collapse to opacity or the final state.
+One easing for everything: ease-out-strong `cubic-bezier(0.23, 1, 0.32, 1)`. Sections reveal once on scroll, 14px rise over 600ms with 50–60ms stagger; hero elements enter over 700ms with 70ms steps. FAQ answers expand by animating grid rows over 300ms. Under `prefers-reduced-motion`, movement drops to opacity only, press scale and smooth scroll are disabled.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** mark clinical state with Notation Red (*por tratar*) and Notation Blue (*tratado*), and keep that meaning consistent across chart, legend, cases and copy.
-- **Do** set headings in Archivo at wdth 112 (titles at 125) and body at wdth 100.
-- **Do** put FDI numbers, field labels, visit counts, hours and phone numbers in Martian Mono with tabular numerals.
-- **Do** open every register with a 2px ink top rule and divide rows with 1px ink hairlines at 15%.
-- **Do** label every content item with a Source Tag; dashed for "Contenido de ejemplo".
-- **Do** use the night band for whole sections, with white type and white-at-15% hairlines.
-- **Do** give every pressable the 0.97 press scale and provide a reduced-motion fallback for every animation.
-- **Do** route every booking action through the WhatsApp green button.
+- **Do** keep navy (#13264F) as the text and band color and celeste as the only accent, used on one or two words per heading.
+- **Do** use base celeste only at large or bold sizes; use celeste-deep for small text and links.
+- **Do** put WhatsApp green on every action that opens WhatsApp, and on nothing else.
+- **Do** give every content item a provenance tag, and every stock photo that could pass as the clinic a "Foto referencial" pill.
+- **Do** use pills for actions and chips, 20px for cards, 28px for photos and bands.
+- **Do** keep the appointment card as the only object with the card shadow at rest.
+- **Do** use ease-out `cubic-bezier(0.23, 1, 0.32, 1)`, short distances (≤14px), press scale 0.97, and a reduced-motion fallback for every animation.
+- **Do** write labels and headings in plain Peru Spanish, sentence case.
 
 ### Don't:
-- **Don't** use red or blue as decoration, section backgrounds, or generic accent colour.
-- **Don't** add drop shadows or glows; depth is flat overlap and tone.
-- **Don't** put the chart grid on page or section backgrounds; it belongs to chart surfaces only.
-- **Don't** place mono uppercase taglines above section headings; mono labels name fields, columns and values.
-- **Don't** fall back to white-and-teal heroes, stock smiling patients, or rounded service-card grids.
-- **Don't** box form fields; fields are underlines.
-- **Don't** present demo content (team, testimonials, hours, prices) without its "Contenido de ejemplo" tag.
+- **Don't** introduce a second accent color or fill large areas with celeste.
+- **Don't** use green for non-WhatsApp actions.
+- **Don't** use neutral black shadows or hard offset shadows; shadows are soft and navy-tinted.
+- **Don't** add small uppercase letter-spaced kickers or eyebrows above headings.
+- **Don't** bring back abstract chart notation, technical diagrams or any device that needs explaining (the rejected odontogram world).
+- **Don't** add a second typeface; Figtree carries display and text.
