@@ -2,6 +2,10 @@
 
 Prototipo de landing page para **OdontoPlus VMT**, clínica dental en Av. Pachacútec 2818, 2.º piso, Villa María del Triunfo (Lima). Diseñado por **Creative Programming Partners** para presentar al cliente.
 
+**Ver en vivo:** https://creative-programming-partners.github.io/odontoplus-vmt-landing/ · Hoja de marca: https://creative-programming-partners.github.io/odontoplus-vmt-landing/brand.html
+
+Cada push a `main` vuelve a publicar el sitio en GitHub Pages (`.github/workflows/deploy-pages.yml`).
+
 La página está pensada como la **ficha odontológica** de la clínica: el visitante elige lo que siente, lo ve marcado en el diente (rojo = por tratar, azul = tratado), lee qué tratamiento lo resuelve y reserva por WhatsApp con el mensaje ya escrito.
 
 ## Stack
